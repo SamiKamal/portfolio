@@ -1,4 +1,9 @@
 import { createGlobalStyle } from "styled-components";
+import DharmaGothic from "../../fonts/DharmaGothicE_ExBold_I.otf";
+import Arame from "../../fonts/Arame.ttf";
+import SourceCodeProBold from "../../fonts/SourceCodePro-Bold.woff2";
+import SourceCodeProRegular from "../../fonts/SourceCodePro-Regular.woff2";
+
 
 const GlobalStyles = createGlobalStyle`
 --color-primary: hsl(0, 0%, 60%);
@@ -8,6 +13,33 @@ const GlobalStyles = createGlobalStyle`
 --color-light-grey: hsl(0, 0%, 33%);
 --color-grey-text: hsl(0, 0%, 53%);
 --color-grey-text-hover: hsl(0, 0%, 74%);
+
+
+@font-face {
+    font-family: "Arame";
+    src: url(${Arame}) format("ttf");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Dharma Gothic E";
+    src: url(${DharmaGothic}) format("opentype");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Source Code Pro";
+    src: url(${SourceCodeProBold}) format('woff2');
+    font-display: swap;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    src: url(${SourceCodeProRegular}) format('woff2');
+    font-display: swap;
+    font-weight: bold;
+}
 
 --font-primary: "Dharma Gothic E", sans-serif;
 --font-secondary: "Arame", monospace;
