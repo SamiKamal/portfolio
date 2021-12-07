@@ -51,6 +51,20 @@ html{
 body {
   background-color: var(--color-background);
   color: var(--color-white);
+  font-family: var(--font-regular);
+}
+h1{
+  font-family: var(--font-primary);
+}
+
+h2,h3,h4,h5,h6{
+  font-family: var(---font-secondary);
+}
+
+#root{
+  max-width: 1920px;
+  padding: 0 64px;
+  margin: 0 auto;
 }
 /*
   1. Use a more-intuitive box-sizing model.
