@@ -6,13 +6,19 @@ import SourceCodeProRegular from "../../fonts/SourceCodePro-Regular.woff2";
 
 
 const GlobalStyles = createGlobalStyle`
---color-primary: hsl(0, 0%, 60%);
---color-secondary: hsl(101, 100%, 41%);
---color-background: hsl(223, 14%, 10%);
---color-background-secondary: hsl(0, 0%, 17%);
---color-light-grey: hsl(0, 0%, 33%);
---color-grey-text: hsl(0, 0%, 53%);
---color-grey-text-hover: hsl(0, 0%, 74%);
+html{
+  --color-primary: hsl(0, 0%, 60%);
+  --color-secondary: hsl(101, 100%, 41%);
+  --color-background: hsl(223, 14%, 10%);
+  --color-background-secondary: hsl(0, 0%, 17%);
+  --color-light-grey: hsl(0, 0%, 33%);
+  --color-grey-text: hsl(0, 0%, 53%);
+  --color-grey-text-hover: hsl(0, 0%, 74%);
+
+  --font-primary: "Dharma Gothic E", sans-serif;
+  --font-secondary: "Arame", monospace;
+  --font-regular: "Source Code Pro", monospace;
+}
 
 
 @font-face {
@@ -41,11 +47,9 @@ const GlobalStyles = createGlobalStyle`
     font-weight: bold;
 }
 
---font-primary: "Dharma Gothic E", sans-serif;
---font-secondary: "Arame", monospace;
---font-regular: "Source Code Pro", monospace;
-
-
+body {
+  background-color: var(--color-background);
+}
 /*
   1. Use a more-intuitive box-sizing model.
 */
