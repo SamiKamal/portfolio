@@ -14,6 +14,7 @@ html{
   --color-light-grey: hsl(0, 0%, 33%);
   --color-grey-text: hsl(0, 0%, 53%);
   --color-grey-text-hover: hsl(0, 0%, 74%);
+  --color-white: white;
 
   --font-primary: "Dharma Gothic E", sans-serif;
   --font-secondary: "Arame", monospace;
@@ -49,6 +50,7 @@ html{
 
 body {
   background-color: var(--color-background);
+  color: var(--color-white);
 }
 /*
   1. Use a more-intuitive box-sizing model.
