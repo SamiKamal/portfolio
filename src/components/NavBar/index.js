@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
 import LogoImage from '../../images/Logo.png'
@@ -6,6 +6,14 @@ import LogoImage from '../../images/Logo.png'
 function NavBar(p) {
     const location = useLocation()
     const [isActive, setIsActive] = useState(() => location.pathname.split('/')[1] || '/')
+
+    useEffect(() => {
+        console.log(location)
+        if (!location.hash){
+            setIsActive(() => location.pathname.split('/')[1] || '/')
+        }
+        
+    }, [location])
 
     const handleClick = e => {
         setIsActive(e.target.name)
