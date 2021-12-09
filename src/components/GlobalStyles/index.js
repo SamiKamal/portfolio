@@ -13,6 +13,7 @@ html{
   --color-background-secondary: hsl(0, 0%, 17%);
   --color-light-grey: hsl(0, 0%, 33%);
   --color-grey-text: hsl(0, 0%, 53%);
+  --color-grey-text-secondary: hsl(0, 0%, 60%);
   --color-grey-text-hover: hsl(0, 0%, 74%);
   --color-white: white;
 
@@ -90,8 +91,11 @@ html, body {
   5. Improve text rendering
 */
 body {
-  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+}
+
+p,span{
+  line-height: 1.5;
 }
 /*
   6. Improve media defaults
