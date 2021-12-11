@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Footer from './components/Footer';
 import NavBar from './components/NavBar';
 import AboutPage from './pages/AboutPage';
 import HomePage from './pages/HomePage';
@@ -14,6 +15,7 @@ function App() {
       <Route path="/work/:name" element={<WorkPage/>}/>
 
     </Routes>
+    <Footer/>
   </BrowserRouter>
 
   );
