@@ -76,7 +76,7 @@ const ImageWrapper = styled.div`
 
 const Image = styled.img`
     transform: translateY(-10%);
-    animation: ${Fly} 5s infinite alternate;
+    animation: ${Fly} 5s infinite alternate ease-in-out;
     pointer-events: none;
 `
 
