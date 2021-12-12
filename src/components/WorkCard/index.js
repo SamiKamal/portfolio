@@ -111,10 +111,6 @@ const ButtonIcon = styled(Link)`
     color: inherit;
 
     & > *:hover{
-        transition: filter 350ms;
-    }
-
-    & > *:hover{
         filter: brightness(.7);
     }
 

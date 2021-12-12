@@ -8,7 +8,6 @@ function NavBar(p) {
     const [isActive, setIsActive] = useState(() => location.pathname.split('/')[1] || '/')
 
     useEffect(() => {
-        console.log(location)
         if (!location.hash){
             setIsActive(() => location.pathname.split('/')[1] || '/')
         }
@@ -23,7 +22,7 @@ function NavBar(p) {
             <LogoWrapper to="/">
                 <Logo src={LogoImage} alt="My Personal Logo"/>
             </LogoWrapper>
-            <NavList>
+            <NavList className='test'>
                 <NavItem><NavLink onClick={handleClick} name="/" active={isActive} to="/">Home</NavLink></NavItem>
                 <NavItem><NavLink onClick={handleClick} name="about" active={isActive} to="/about">About</NavLink></NavItem>
                 <NavItem><NavLink onClick={handleClick} name="work" as="a" href="/#work" active={isActive}>Work</NavLink></NavItem>
