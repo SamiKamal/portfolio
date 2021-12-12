@@ -29,7 +29,7 @@ function HomePage() {
                 </ImageWrapper>
             </HeroWrapper>
 
-            <WorkWrapper>
+            <WorkWrapper id="work">
                 <Heading>Work</Heading>
                 <InnerTextWrapper>
                     <SubHeading symbol="?">Latest work</SubHeading>
