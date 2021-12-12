@@ -7,6 +7,7 @@ import SubHeading from '../../components/Texts/Sub-Heading'
 import SkullImage from '../../images/Hero main-image.png'
 import BackgroundImage from '../../images/Hero background-image.png'
 import {Fly} from '../../util/constants'
+import { GitHub } from 'react-feather'
 
 function HomePage() {
     return (
@@ -49,7 +50,9 @@ function HomePage() {
                                 <WorkLink to="">Visit</WorkLink>
                             </WorkLinksWrapper>
                             <WorkIconsWrapper>
-                                
+                                <ButtonIcon to="/">
+                                    <GitHub/>
+                                </ButtonIcon>
                             </WorkIconsWrapper>
                         </WorkFooter>
                     </WorkProject>
@@ -70,7 +73,9 @@ function HomePage() {
                                 <WorkLink to="">Visit</WorkLink>
                             </WorkLinksWrapper>
                             <WorkIconsWrapper>
-                                
+                                <ButtonIcon to="/">
+                                    <GitHub/>
+                                </ButtonIcon>
                             </WorkIconsWrapper>
                         </WorkFooter>
                     </WorkProject>
@@ -151,10 +156,7 @@ const WorkProject = styled.article`
         box-shadow:
             -2.1px 1.6px 1.3px rgba(0, 0, 0, 0.05),
             -4.6px 3.4px 2.9px rgba(0, 0, 0, 0.068),
-            -7.6px 5.8px 4.8px rgba(0, 0, 0, 0.08),
-            -11.6px 8.7px 7.2px rgba(0, 0, 0, 0.088),
-            -16.7px 12.5px 10.4px rgba(0, 0, 0, 0.094),
-            -23.6px 17.7px 14.7px rgba(0, 0, 0, 0.099);
+            -16.7px 12.5px 10.4px rgba(0, 0, 0, 0.094);
         transition: transform 250ms, box-shadow 250ms;
     }
 `
@@ -177,6 +179,8 @@ const WorkSummary = styled.p`
 `
 
 const WorkFooter = styled.footer`
+    display: flex;
+    justify-content: space-between;
 `
 
 const WorkLinksWrapper = styled.div`
@@ -197,6 +201,21 @@ const WorkLink = styled(Link)`
 `
 
 const WorkIconsWrapper = styled.div`
+`
+
+const ButtonIcon = styled(Link)`
+    border: none;
+    background: none;
+    color: inherit;
+
+    & > *:hover{
+        transition: filter 350ms;
+    }
+
+    & > *:hover{
+        filter: brightness(.7);
+    }
+
 `
 
 export default HomePage
