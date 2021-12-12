@@ -37,7 +37,15 @@ function HomePage() {
                 <WorkList>
                     <WorkCard
                     title="Did I meet a hacker"
-                    summary="It’s a website that allow users to search and report hackers they meet in video games"
+                    summary="It’s a website that allow users to search and report hackers they meet in video games."
+                    readMoreLink="/"
+                    visitLink="/"
+                    githubLink="/"
+                    />
+
+                    <WorkCard
+                    title="React Commerce"
+                    summary="a website where you can buy furniture for your home."
                     readMoreLink="/"
                     visitLink="/"
                     githubLink="/"
@@ -89,6 +97,7 @@ const WorkList = styled.div`
     padding-top: 128px;
     justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 256px;
 `
 
 export default HomePage

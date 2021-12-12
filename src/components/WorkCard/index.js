@@ -48,6 +48,8 @@ const WorkImageWrapper = styled.div`
 
 const WorkProject = styled.article`
     --spacing: 16px;
+    display: flex;
+    flex-direction: column;
     max-width: 405px;
     background-color: var(--color-light-grey);
     border-radius: 8px;
@@ -83,6 +85,7 @@ const WorkSummary = styled.p`
 const WorkFooter = styled.footer`
     display: flex;
     justify-content: space-between;
+    margin-top: auto;
 `
 
 const WorkLinksWrapper = styled.div`
