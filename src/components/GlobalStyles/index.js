@@ -54,6 +54,23 @@ body {
   color: var(--color-white);
   font-family: var(--font-regular);
 }
+
+@supports (filter: blur(345.36px)) {
+  body::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+    background: radial-gradient(hsla(90 100% 50% / .21), hsla(155 85% 59% / 0.22));
+    transform: translate(-50%, -50%);
+    filter: blur(345.36px);
+    pointer-events: none;
+  }  
+}
+
 h1{
   font-family: var(--font-primary);
 }
