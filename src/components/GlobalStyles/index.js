@@ -25,26 +25,26 @@ html{
 
 @font-face {
     font-family: "Arame";
-    src: url(${Arame}) format("ttf");
+    src: url(${Arame});
     font-display: swap;
 }
 @font-face {
     font-family: "Dharma Gothic E";
-    src: url(${DharmaGothic}) format("opentype");
+    src: url(${DharmaGothic});
     font-weight: bold;
     font-style: italic;
     font-display: swap;
 }
 @font-face {
     font-family: "Source Code Pro";
-    src: url(${SourceCodeProBold}) format('woff2');
+    src: url(${SourceCodeProBold});
     font-display: swap;
     font-weight: normal;
 }
 
 @font-face {
     font-family: "Source Code Pro";
-    src: url(${SourceCodeProRegular}) format('woff2');
+    src: url(${SourceCodeProRegular});
     font-display: swap;
     font-weight: bold;
 }
