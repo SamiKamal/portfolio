@@ -9,7 +9,7 @@ function Paragraph({children}, ...props) {
     )
 }
 
-const Parag = styled.p`
+export const Parag = styled.p`
     
     & a {
         color: inherit;

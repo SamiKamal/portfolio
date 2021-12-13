@@ -7,7 +7,6 @@ import SubHeading from '../../components/Texts/Sub-Heading'
 import SkullImage from '../../images/Hero main-image.png'
 import BackgroundImage from '../../images/Hero background-image.png'
 import {Fly} from '../../util/constants'
-import { GitHub } from 'react-feather'
 import WorkCard from '../../components/WorkCard'
 
 function HomePage() {
