@@ -56,7 +56,7 @@ const WorkProject = styled.article`
     border-radius: 8px;
     padding: var(--spacing);
 
-    @media not ${QUERIES.tabletAndSmaller} {
+    @media not screen and ${QUERIES.tabletAndSmaller} {
         &:hover ${WorkImageWrapper}{
             transform: translate(calc(var(--spacing) * 2), calc(var(--spacing) * -1.55));
             box-shadow:
