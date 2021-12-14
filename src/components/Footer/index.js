@@ -33,7 +33,7 @@ const Wrapper = styled.footer`
     justify-content: space-between;
 
     @media ${QUERIES.phoneAndSmaller} {
-        flex-wrap: wrap;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
     }
