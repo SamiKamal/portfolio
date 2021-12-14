@@ -17,7 +17,8 @@ const Heading = styled.h2`
     color: var(--color-grey-text-secondary);
     font-weight: normal;
     margin-top: -6px;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
+    line-height: 1;
 
     &::after{
         content: "${p => p.symbol}";

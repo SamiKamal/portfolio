@@ -1,6 +1,7 @@
 import React from 'react'
 import { GitHub, Twitter } from 'react-feather'
 import styled from 'styled-components'
+import { QUERIES } from '../../util/constants'
 
 function Footer() {
     return (
@@ -30,6 +31,13 @@ const Wrapper = styled.footer`
     padding: 16px 64px;
     display: flex;
     justify-content: space-between;
+
+    @media ${QUERIES.phoneAndSmaller} {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
 `
 
 const TextWrapper = styled.p`
@@ -37,6 +45,11 @@ const TextWrapper = styled.p`
 
 const IconsWrapper = styled.div`
     display: flex;
+    
+    @media ${QUERIES.phoneAndSmaller} {
+        margin-top: 32px;
+    }
+
 `
 
 const IconButton = styled.a`
