@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { QUERIES } from '../../util/constants'
 
 function Heading({children}, ...props) {
     return (
@@ -12,6 +13,11 @@ function Heading({children}, ...props) {
 const HeadingText = styled.h1`
     font-size: ${96 / 16}rem;
     line-height: 0.8;
+
+    @media ${QUERIES.phoneAndSmaller} {
+        font-size: ${80 / 16}rem;
+    }
+
 `
 
 export default Heading

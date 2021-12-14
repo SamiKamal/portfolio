@@ -6,7 +6,7 @@ import Paragraph from '../../components/Texts/Paragraph'
 import SubHeading from '../../components/Texts/Sub-Heading'
 import SkullImage from '../../images/Hero main-image.png'
 import BackgroundImage from '../../images/Hero background-image.png'
-import {Fly} from '../../util/constants'
+import {Fly, QUERIES} from '../../util/constants'
 import WorkCard from '../../components/WorkCard'
 
 function HomePage() {
@@ -62,23 +62,43 @@ const HeroWrapper = styled.section`
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top right;
-    margin-right: -64px;
+    margin-right: calc(var(--website-gap) * -1);
     padding-bottom: 64px;
+
+    @media ${QUERIES.tabletAndSmaller} {
+        padding-top: 128px;
+    }
+
 `
 
 const TextWrapper = styled.div`
     flex: 4;
+    margin-right: var(--website-gap);
+
+    @media ${QUERIES.laptopAndSmaller} {
+        flex: 5;
+    }
 `
 
 const InnerTextWrapper = styled.div`
     --gap: 80px;
     padding-left: var(--gap);
     max-width: calc(660px + var(--gap));
+
+    @media ${QUERIES.tabletAndSmaller} {
+        --gap: 32px;
+    }
+
 `
 
 const ImageWrapper = styled.div`
     flex: 3;
     flex-shrink: 3;
+
+    @media ${QUERIES.tabletAndSmaller} {
+        display: none;
+    }
+
 `
 
 const Image = styled.img`
@@ -96,7 +116,7 @@ const WorkList = styled.div`
     padding-top: 128px;
     justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 256px;
+    grid-gap: 64px 256px;
 `
 
 export default HomePage

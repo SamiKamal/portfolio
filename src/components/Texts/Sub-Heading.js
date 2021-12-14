@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { QUERIES } from '../../util/constants'
 
 function SubHeading({children, symbol}, ...props) {
     return (
@@ -22,6 +23,11 @@ const Heading = styled.h2`
         content: "${p => p.symbol}";
         color: var(--color-secondary);
     }
+
+    @media ${QUERIES.phoneAndSmaller} {
+        font-size: ${24 / 16}rem;
+    }
+
 `
 
 export default SubHeading

@@ -5,6 +5,7 @@ import BackgroundImage from '../../images/Hero About background-image.png'
 import SubHeading from '../../components/Texts/Sub-Heading'
 import Heading from '../../components/Texts/Heading'
 import Paragraph, { Parag } from '../../components/Texts/Paragraph'
+import { QUERIES } from '../../util/constants'
 
 function AboutPage() {
     return (
@@ -58,6 +59,11 @@ const HeroWrapper = styled.section`
 
 const TextWrapper = styled.div`
     flex: 4;
+
+    @media ${QUERIES.laptopAndSmaller} {
+        flex: 5;
+    }
+
 `
 
 const StrongParagraph = styled(Parag)`
@@ -81,11 +87,21 @@ const InnerTextWrapper = styled.div`
     --gap: 80px;
     padding-left: var(--gap);
     max-width: calc(660px + var(--gap));
+
+    @media ${QUERIES.tabletAndSmaller} {
+        --gap: 32px;
+    }
+
 `
 
 const ImageWrapper = styled.div`
     flex: 3;
     flex-shrink: 3;
+
+    @media ${QUERIES.tabletAndSmaller} {
+        display: none;
+    }
+
 `
 
 const Image = styled.img`

@@ -25,8 +25,8 @@ const Wrapper = styled.footer`
     color: var(--color-grey-text-secondary);
     text-transform: uppercase;
     background: var(--color-background-secondary);
-    margin-left: -64px;
-    margin-right: -64px;
+    margin-left: calc(var(--website-gap) * -1);
+    margin-right: calc(var(--website-gap) * -1);
     padding: 16px 64px;
     display: flex;
     justify-content: space-between;

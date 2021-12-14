@@ -3,6 +3,7 @@ import DharmaGothic from "../../fonts/DharmaGothicE_ExBold_I.otf";
 import Arame from "../../fonts/Arame.ttf";
 import SourceCodeProBold from "../../fonts/SourceCodePro-Bold.woff2";
 import SourceCodeProRegular from "../../fonts/SourceCodePro-Regular.woff2";
+import { QUERIES } from "../../util/constants";
 
 
 const GlobalStyles = createGlobalStyle`
@@ -53,6 +54,7 @@ body {
   background-color: var(--color-background);
   color: var(--color-white);
   font-family: var(--font-regular);
+  overflow-x: hidden;
 }
 
 @supports (filter: blur(345.36px)) {
@@ -61,8 +63,10 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 1000px;
-    height: 1000px;
+    max-width: 1000px;
+    max-height: 1000px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     background: radial-gradient(hsla(90 100% 50% / .21), hsla(155 85% 59% / 0.22));
     transform: translate(-50%, -50%);
@@ -80,9 +84,16 @@ h2,h3,h4,h5,h6{
 }
 
 #root{
+  --website-gap: 64px;
   max-width: 1920px;
-  padding: 0 64px;
+  padding: 0 var(--website-gap);
   margin: 0 auto;
+  min-height: 100%;
+
+  @media ${QUERIES.tabletAndSmaller} {
+        --website-gap: 32px;
+    }
+
 }
 /*
   1. Use a more-intuitive box-sizing model.
@@ -100,7 +111,7 @@ h2,h3,h4,h5,h6{
   3. Allow percentage-based heights in the application
 */
 html, body {
-  height: 100%;
+  min-height: 100%;
 }
 /*
   Typographic tweaks!

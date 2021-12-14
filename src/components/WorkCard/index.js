@@ -2,6 +2,7 @@ import React from 'react'
 import { GitHub } from 'react-feather'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { QUERIES } from '../../util/constants'
 
 function WorkCard({title, summary, readMoreLink, visitLink, githubLink}) {
     return (
@@ -55,14 +56,29 @@ const WorkProject = styled.article`
     border-radius: 8px;
     padding: var(--spacing);
 
-    &:hover ${WorkImageWrapper}{
-        transform: translate(calc(var(--spacing) * 2), calc(var(--spacing) * -1.55));
-        box-shadow:
-            -2.1px 1.6px 1.3px rgba(0, 0, 0, 0.05),
-            -4.6px 3.4px 2.9px rgba(0, 0, 0, 0.068),
-            -16.7px 12.5px 10.4px rgba(0, 0, 0, 0.094);
-        transition: transform 250ms, box-shadow 250ms;
+    @media not ${QUERIES.tabletAndSmaller} {
+        &:hover ${WorkImageWrapper}{
+            transform: translate(calc(var(--spacing) * 2), calc(var(--spacing) * -1.55));
+            box-shadow:
+                -2.1px 1.6px 1.3px rgba(0, 0, 0, 0.05),
+                -4.6px 3.4px 2.9px rgba(0, 0, 0, 0.068),
+                -16.7px 12.5px 10.4px rgba(0, 0, 0, 0.094);
+            transition: transform 250ms, box-shadow 250ms;
+        }
     }
+
+    @media ${QUERIES.tabletAndSmaller} {
+        ${WorkImageWrapper}{
+            transform: translate(calc(var(--spacing) * 2), calc(var(--spacing) * -1.55));
+            box-shadow:
+                -2.1px 1.6px 1.3px rgba(0, 0, 0, 0.05),
+                -4.6px 3.4px 2.9px rgba(0, 0, 0, 0.068),
+                -16.7px 12.5px 10.4px rgba(0, 0, 0, 0.094);
+            transition: transform 250ms, box-shadow 250ms;
+        }
+    }
+
+
 `
 
 
@@ -96,7 +112,7 @@ const WorkLink = styled(Link)`
     transition: color 250ms;
 
     &:not(:last-child){
-        margin-right: 8px;
+        margin-right: 16px;
     }
 
     &:hover{
