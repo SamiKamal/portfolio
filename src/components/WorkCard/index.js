@@ -22,7 +22,7 @@ function WorkCard({title, summary, readMoreLink, visitLink, githubLink, src}) {
                 <WorkLink as="a" href={visitLink}>Visit</WorkLink>
             </WorkLinksWrapper>
             <WorkIconsWrapper>
-                <ButtonIcon to={githubLink}>
+                <ButtonIcon as="a" href={githubLink}>
                     <GitHub/>
                 </ButtonIcon>
             </WorkIconsWrapper>
