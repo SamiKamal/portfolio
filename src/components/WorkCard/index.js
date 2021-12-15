@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { QUERIES } from '../../util/constants'
 
-function WorkCard({title, summary, readMoreLink, visitLink, githubLink}) {
+function WorkCard({title, summary, readMoreLink, visitLink, githubLink, src}) {
     return (
         <WorkProject>
         <WorkImageWrapper>
-            <WorkImage/>
+            <WorkImage src={src} alt={`${title} cover image`}/>
         </WorkImageWrapper>
 
         <WorkTextWrapper>
@@ -35,6 +35,7 @@ const WorkImageWrapper = styled.div`
     height: 260px;
     background-color: white;
     border-radius: 8px;
+    overflow: hidden;
     box-shadow:
         0px 1px 2.2px rgba(0, 0, 0, 0.02),
         0px 2.5px 5.3px rgba(0, 0, 0, 0.028),
@@ -44,6 +45,7 @@ const WorkImageWrapper = styled.div`
         0px 37px 80px rgba(0, 0, 0, 0.07)
 ;
     transition: transform 750ms, box-shadow 750ms;
+    will-change: transform;
 
 `
 
@@ -83,7 +85,9 @@ const WorkProject = styled.article`
 
 
 const WorkImage = styled.img`
-    
+    width: auto;
+    height: 100%;
+    object-fit: cover;
 `
 
 const WorkTextWrapper = styled.div`

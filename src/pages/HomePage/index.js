@@ -5,6 +5,8 @@ import Heading from '../../components/Texts/Heading'
 import Paragraph from '../../components/Texts/Paragraph'
 import SubHeading from '../../components/Texts/Sub-Heading'
 import SkullImage from '../../images/Hero main-image.png'
+import didimeetahackerCover from '../../images/didimeetahacker-cover.png'
+import reactcommerceCover from '../../images/react-commerce-cover.png'
 import BackgroundImage from '../../images/Hero background-image.png'
 import {Fly, QUERIES} from '../../util/constants'
 import WorkCard from '../../components/WorkCard'
@@ -40,6 +42,7 @@ function HomePage() {
                     readMoreLink="/"
                     visitLink="https://didimeetahacker.vercel.app/"
                     githubLink="/"
+                    src={didimeetahackerCover}
                     />
 
                     <WorkCard
@@ -48,6 +51,7 @@ function HomePage() {
                     readMoreLink="/"
                     visitLink="https://react-commercee.netlify.app/"
                     githubLink="https://github.com/SamiKamal/React-commerce"
+                    src={reactcommerceCover}
                     />
                 </WorkList>
             </WorkWrapper>
