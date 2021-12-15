@@ -21,6 +21,8 @@ html{
   --font-primary: "Dharma Gothic E", sans-serif;
   --font-secondary: "Arame", monospace;
   --font-regular: "Source Code Pro", monospace;
+
+  scroll-behavior: smooth;
 }
 
 
