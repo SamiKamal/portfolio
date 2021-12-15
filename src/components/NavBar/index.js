@@ -24,8 +24,8 @@ function NavBar(p) {
             </LogoWrapper>
             <NavList className='test'>
                 <NavItem><NavLink onClick={handleClick} name="/" active={isActive} to="/">Home</NavLink></NavItem>
-                <NavItem><NavLink onClick={handleClick} name="about" active={isActive} to="/about">About</NavLink></NavItem>
                 <NavItem><NavLink onClick={handleClick} name="work" as="a" href="/#work" active={isActive}>Work</NavLink></NavItem>
+                <NavItem><NavLink onClick={handleClick} name="about" active={isActive} to="/about">About</NavLink></NavItem>
                 <NavItem><NavLink onClick={handleClick} name="contact" href="mailto:sami-dev@hotmail.com" as="a" active={isActive}>Contact</NavLink></NavItem>
             </NavList>
         </Wrapper>

@@ -38,7 +38,7 @@ function HomePage() {
                     title="Did I meet a hacker"
                     summary="It’s a website that allow users to search and report hackers they meet in video games."
                     readMoreLink="/"
-                    visitLink="/"
+                    visitLink="https://didimeetahacker.vercel.app/"
                     githubLink="/"
                     />
 
@@ -46,8 +46,8 @@ function HomePage() {
                     title="React Commerce"
                     summary="a website where you can buy furniture for your home."
                     readMoreLink="/"
-                    visitLink="/"
-                    githubLink="/"
+                    visitLink="https://react-commercee.netlify.app/"
+                    githubLink="https://github.com/SamiKamal/React-commerce"
                     />
                 </WorkList>
             </WorkWrapper>

@@ -19,7 +19,7 @@ function WorkCard({title, summary, readMoreLink, visitLink, githubLink}) {
         <WorkFooter>
             <WorkLinksWrapper>
                 <WorkLink to={readMoreLink}>Read More</WorkLink>
-                <WorkLink to={visitLink}>Visit</WorkLink>
+                <WorkLink as="a" href={visitLink}>Visit</WorkLink>
             </WorkLinksWrapper>
             <WorkIconsWrapper>
                 <ButtonIcon to={githubLink}>
