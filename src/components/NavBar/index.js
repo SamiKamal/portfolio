@@ -1,11 +1,15 @@
+import { DialogContent, DialogOverlay } from '@reach/dialog'
 import React, {useState, useEffect} from 'react'
+import { Menu, X } from 'react-feather'
 import { Link, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
 import LogoImage from '../../images/Logo.png'
+import { QUERIES } from '../../util/constants'
 
 function NavBar(p) {
     const location = useLocation()
     const [isActive, setIsActive] = useState(() => location.pathname.split('/')[1] || '/')
+    const [isOpen, setIsOpen] = useState(false)
 
     useEffect(() => {
         if (!location.hash){
@@ -16,7 +20,13 @@ function NavBar(p) {
 
     const handleClick = e => {
         setIsActive(e.target.name)
+        setIsOpen(false)
     }
+
+    const closeDialog = e => {
+        setIsOpen(false);
+    }
+
     return (
         <Wrapper>
             <LogoWrapper to="/">
@@ -28,6 +38,24 @@ function NavBar(p) {
                 <NavItem><NavLink onClick={handleClick} name="about" active={isActive} to="/about">About</NavLink></NavItem>
                 <NavItem><NavLink onClick={handleClick} name="contact" href="mailto:sami-dev@hotmail.com" as="a" active={isActive}>Contact</NavLink></NavItem>
             </NavList>
+            <ButtonMenu onClick={() => setIsOpen(true)}>
+                <Menu/>
+            </ButtonMenu>
+
+            <Overlay isOpen={isOpen} onDismiss={closeDialog}>
+                <Content>
+                    <ButtonMenu onClick={() => setIsOpen(false)}>
+                        <X/>
+                    </ButtonMenu>
+                    <NavListMobile className='test'>
+                        <NavItem><NavLink onClick={handleClick} name="/" active={isActive} to="/">Home</NavLink></NavItem>
+                        <NavItem><NavLink onClick={handleClick} name="work" as="a" href="/#work" active={isActive}>Work</NavLink></NavItem>
+                        <NavItem><NavLink onClick={handleClick} name="about" active={isActive} to="/about">About</NavLink></NavItem>
+                        <NavItem><NavLink onClick={handleClick} name="contact" href="mailto:sami-dev@hotmail.com" as="a" active={isActive}>Contact</NavLink></NavItem>
+                    </NavListMobile>
+                </Content>
+            </Overlay>
+
         </Wrapper>
     )
 }
@@ -54,6 +82,10 @@ const NavList = styled.ul`
     list-style: none;
     display: flex;
     color: var(--color-grey-text);
+
+    @media ${QUERIES.phoneAndSmaller}{
+        display: none;
+    }
 `
 
 const NavItem = styled.li`
@@ -73,5 +105,65 @@ const NavLink = styled(Link)`
         filter: brightness(1.3);
     }
 `
+
+const ButtonMenu = styled.button`
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+
+    @media ${QUERIES.phoneAndSmaller} {
+        display: revert;
+    }
+
+`
+
+const Overlay = styled(DialogOverlay)`
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: hsla(0 0% 0% / 0.2);
+
+    @media ${QUERIES.phoneAndSmaller}{
+        display: revert;
+    }
+
+`
+
+const Content = styled(DialogContent)`
+    position: absolute;
+    right: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background-color: var(--color-background-secondary);
+
+    & ${ButtonMenu}{
+        align-self: end;
+        margin-bottom: auto;
+        margin-right: calc(var(--website-gap) - 16px);
+        margin-top: 28px;
+        padding: 20px;
+    }
+`
+
+const NavListMobile = styled(NavList)`
+    display: flex;
+    flex-direction: column;
+    padding-right: 128px;
+    margin-bottom: auto;
+
+    & > *:not(:last-child){
+        margin-bottom: 32px;
+    }
+
+`
+
 
 export default NavBar

@@ -22,6 +22,13 @@ html{
   --font-secondary: "Arame", monospace;
   --font-regular: "Source Code Pro", monospace;
 
+  --website-gap: 64px;
+
+  @media ${QUERIES.tabletAndSmaller} {
+        --website-gap: 32px;
+    }
+
+
   scroll-behavior: smooth;
 }
 
@@ -86,15 +93,10 @@ h2,h3,h4,h5,h6{
 }
 
 #root{
-  --website-gap: 64px;
   max-width: 1920px;
   padding: 0 var(--website-gap);
   margin: 0 auto;
   min-height: 100%;
-
-  @media ${QUERIES.tabletAndSmaller} {
-        --website-gap: 32px;
-    }
 
 }
 /*
