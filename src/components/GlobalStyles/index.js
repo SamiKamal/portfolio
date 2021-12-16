@@ -59,6 +59,11 @@ html{
     font-weight: bold;
 }
 
+::selection{
+  color: black;
+  background: var(--color-secondary);
+}
+
 body {
   background-color: var(--color-background);
   color: var(--color-white);
