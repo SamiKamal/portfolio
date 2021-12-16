@@ -5,11 +5,19 @@ import { Link, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
 import LogoImage from '../../images/Logo.png'
 import { QUERIES } from '../../util/constants'
+import { animated, useTransition } from 'react-spring'
+
 
 function NavBar(p) {
     const location = useLocation()
     const [isActive, setIsActive] = useState(() => location.pathname.split('/')[1] || '/')
     const [isOpen, setIsOpen] = useState(false)
+    const transitions = useTransition(isOpen,{
+        from: {opacity: 0, x: 100},
+        enter: {opacity: 1, x: 0},
+        reverse: isOpen,
+        leave: {opacity: 0, x: 100}
+    })
 
     useEffect(() => {
         if (!location.hash){
@@ -21,10 +29,6 @@ function NavBar(p) {
     const handleClick = e => {
         setIsActive(e.target.name)
         setIsOpen(false)
-    }
-
-    const closeDialog = e => {
-        setIsOpen(false);
     }
 
     return (
@@ -42,8 +46,11 @@ function NavBar(p) {
                 <Menu/>
             </ButtonMenu>
 
-            <Overlay isOpen={isOpen} onDismiss={closeDialog}>
-                <Content>
+            {transitions((styles, item) => {
+                console.log(styles)
+                return item && 
+            (<Overlay style={{opacity: styles.opacity}}>
+                <Content style={{transform: styles.x.to(value => `translateX(${value}px)`)}}>
                     <ButtonMenu onClick={() => setIsOpen(false)}>
                         <X/>
                     </ButtonMenu>
@@ -54,7 +61,7 @@ function NavBar(p) {
                         <NavItem><NavLink onClick={handleClick} name="contact" href="mailto:sami-dev@hotmail.com" as="a" active={isActive}>Contact</NavLink></NavItem>
                     </NavListMobile>
                 </Content>
-            </Overlay>
+            </Overlay>)})}
 
         </Wrapper>
     )
@@ -119,7 +126,7 @@ const ButtonMenu = styled.button`
 
 `
 
-const Overlay = styled(DialogOverlay)`
+const Overlay = styled(animated(DialogOverlay))`
     display: none;
     position: fixed;
     top: 0;
@@ -134,7 +141,7 @@ const Overlay = styled(DialogOverlay)`
 
 `
 
-const Content = styled(DialogContent)`
+const Content = styled(animated(DialogContent))`
     position: absolute;
     right: 0;
     height: 100%;
