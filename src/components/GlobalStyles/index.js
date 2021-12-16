@@ -8,6 +8,8 @@ import { QUERIES } from "../../util/constants";
 
 const GlobalStyles = createGlobalStyle`
 html{
+  --reach-dialog: 1;
+
   --color-primary: hsl(0, 0%, 60%);
   --color-secondary: hsl(101, 100%, 41%);
   --color-background: hsl(223, 14%, 10%);
