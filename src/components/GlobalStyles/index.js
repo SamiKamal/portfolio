@@ -64,6 +64,30 @@ html{
   background: var(--color-secondary);
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: hsl(0, 0%, 17%);
+  
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsl(0, 0%, 33%);
+  border-radius: 5px;
+  border: 2px solid hsl(0, 0%, 17%);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(0, 0%, 25%);
+}
+
+
 body {
   background-color: var(--color-background);
   color: var(--color-white);
