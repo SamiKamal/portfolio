@@ -18,11 +18,11 @@ function WorkCard({title, summary, readMoreLink, visitLink, githubLink, src}) {
 
         <WorkFooter>
             <WorkLinksWrapper>
-                <WorkLink to={readMoreLink}>Read More</WorkLink>
-                <WorkLink as="a" href={visitLink}>Visit</WorkLink>
+                <WorkLink target="_blank" to={readMoreLink}>Read More</WorkLink>
+                <WorkLink target="_blank" as="a" href={visitLink}>Visit</WorkLink>
             </WorkLinksWrapper>
             <WorkIconsWrapper>
-                <ButtonIcon as="a" href={githubLink}>
+                <ButtonIcon target="_blank" as="a" href={githubLink}>
                     <GitHub/>
                 </ButtonIcon>
             </WorkIconsWrapper>

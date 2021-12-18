@@ -10,10 +10,10 @@ function Footer() {
               &copy;  Sami Ibrahim {new Date().getFullYear()}
             </TextWrapper>
             <IconsWrapper>
-                <IconButton href="https://github.com/SamiKamal">
+                <IconButton target="_blank" href="https://github.com/SamiKamal">
                     <GitHub/>
                 </IconButton>
-                <IconButton href="https://twitter.com/Samii_Dev">
+                <IconButton target="_blank" href="https://twitter.com/Samii_Dev">
                     <Twitter/>
                 </IconButton>
 
