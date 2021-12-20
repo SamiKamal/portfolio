@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { animated, useTransition } from 'react-spring';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
