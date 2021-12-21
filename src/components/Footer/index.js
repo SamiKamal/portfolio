@@ -10,12 +10,17 @@ function Footer() {
               &copy;  Sami Ibrahim {new Date().getFullYear()}
             </TextWrapper>
             <IconsWrapper>
-                <IconButton target="_blank" href="https://github.com/SamiKamal">
-                    <GitHub/>
-                </IconButton>
-                <IconButton target="_blank" href="https://twitter.com/Samii_Dev">
-                    <Twitter/>
-                </IconButton>
+                <IconInnerWrapper>
+                    <IconButton target="_blank" href="https://github.com/SamiKamal">
+                        <GitHub/>
+                    </IconButton>
+                    <IconButton target="_blank" href="https://twitter.com/Samii_Dev">
+                        <Twitter/>
+                    </IconButton>
+                </IconInnerWrapper>
+                <MailButton target="_blank" href="mailto:sami-dev@hotmail.com">
+                    sami-dev@hotmail.com
+                </MailButton>
 
             </IconsWrapper>
         </Wrapper>
@@ -29,6 +34,7 @@ const Wrapper = styled.footer`
     margin-left: calc(var(--website-gap) * -1);
     margin-right: calc(var(--website-gap) * -1);
     padding: 16px 64px;
+    gap: 0 32px;
     display: flex;
     justify-content: space-between;
 
@@ -45,8 +51,11 @@ const TextWrapper = styled.p`
 
 const IconsWrapper = styled.div`
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     
     @media ${QUERIES.phoneAndSmaller} {
+        flex-direction: column;
         margin-top: 32px;
     }
 
@@ -54,14 +63,26 @@ const IconsWrapper = styled.div`
 
 const IconButton = styled.a`
     color: inherit;
-
-    &:not(:last-child) {
-        margin-right: 16px;    
-    }
+    margin-right: 16px;    
 
     & > *:hover {
         filter: brightness(1.3);
     }
+`
+
+const IconInnerWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: end;
+`
+
+const MailButton = styled(IconButton)`
+    text-transform: initial;
+
+    @media ${QUERIES.phoneAndSmaller} {
+        margin-top: 16px;
+    }
+
 `
 
 export default Footer
