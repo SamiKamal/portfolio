@@ -39,7 +39,7 @@ function HomePage() {
                     <WorkCard
                     title="Did I meet a hacker"
                     summary="It’s a website that allow users to search and report hackers they meet in video games."
-                    readMoreLink="/"
+                    readMoreLink="/work/didimeetahacker"
                     visitLink="https://didimeetahacker.vercel.app/"
                     githubLink="/"
                     src={didimeetahackerCover}
@@ -49,7 +49,7 @@ function HomePage() {
                     <WorkCard
                     title="React Commerce"
                     summary="a website where you can buy furniture for your home."
-                    readMoreLink="/"
+                    readMoreLink="/work/react-commerce"
                     visitLink="https://react-commercee.netlify.app/"
                     githubLink="https://github.com/SamiKamal/React-commerce"
                     src={reactcommerceCover}

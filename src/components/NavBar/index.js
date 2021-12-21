@@ -47,7 +47,6 @@ function NavBar(p) {
             </ButtonMenu>
 
             {transitions((styles, item) => {
-                console.log(styles)
                 return item && 
             (<Overlay onDismiss={() => setIsOpen(false)} dangerouslyBypassFocusLock style={{opacity: styles.opacity}}>
                 <Content aria-label="Mobile Menu" style={{transform: styles.x.to(value => `translateX(${value}px)`)}}>
