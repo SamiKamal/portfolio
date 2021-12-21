@@ -18,8 +18,8 @@ function Footer() {
                         <Twitter/>
                     </IconButton>
                 </IconInnerWrapper>
-                <MailButton target="_blank" href="mailto:sami-dev@hotmail.com">
-                    sami-dev@hotmail.com
+                <MailButton target="_blank" href="mailto:me@samii.dev">
+                    me@samii.dev
                 </MailButton>
 
             </IconsWrapper>
