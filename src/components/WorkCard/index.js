@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { QUERIES } from '../../util/constants'
 
-function WorkCard({title, summary, readMoreLink, visitLink, githubLink, src}) {
+function WorkCard({title, summary, readMoreLink, visitLink, githubLink, src, stack}) {
     return (
         <WorkProject>
         <WorkImageWrapper>
@@ -15,6 +15,12 @@ function WorkCard({title, summary, readMoreLink, visitLink, githubLink, src}) {
             <WorkHeader>{title}</WorkHeader>
             <WorkSummary>{summary}</WorkSummary>
         </WorkTextWrapper>
+
+        <StackWrapper>
+                <StackList>
+                    {stack.map(el => <StackItem>{el}</StackItem>)}
+                </StackList>
+        </StackWrapper>
 
         <WorkFooter>
             <WorkLinksWrapper>
@@ -92,7 +98,7 @@ const WorkImage = styled.img`
 
 const WorkTextWrapper = styled.div`
     margin-top: 16px;
-    margin-bottom: 32px;
+    margin-bottom: 8px;
 `
 
 const WorkHeader = styled.h3`
@@ -124,6 +130,27 @@ const WorkLink = styled(Link)`
     }
 
 `
+
+const StackWrapper = styled.div`
+    margin: 16px 0;
+    margin-top: auto;
+`
+
+const StackList =  styled.ul`
+    display: flex;
+    list-style: none;
+    padding: 0;
+`
+
+const StackItem = styled.li`
+
+    border-bottom: 3px solid var(--color-secondary);
+
+    &:not(:last-child) {
+        margin-right: 16px;
+    }
+`
+
 
 const WorkIconsWrapper = styled.div`
 `

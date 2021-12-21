@@ -43,6 +43,7 @@ function HomePage() {
                     visitLink="https://didimeetahacker.vercel.app/"
                     githubLink="/"
                     src={didimeetahackerCover}
+                    stack={["React", "Node.js", "MongoDB"]}
                     />
 
                     <WorkCard
@@ -52,6 +53,7 @@ function HomePage() {
                     visitLink="https://react-commercee.netlify.app/"
                     githubLink="https://github.com/SamiKamal/React-commerce"
                     src={reactcommerceCover}
+                    stack={["React", "Redux"]}
                     />
                 </WorkList>
             </WorkWrapper>
