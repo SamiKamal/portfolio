@@ -28,13 +28,13 @@ function AboutPage() {
                         </Paragraph>
                         <StrongParagraph>
                             Here are a few technologies I’ve been working with recently:
+                        </StrongParagraph>
                             <StackList>
                                 <StackItem>Javascript</StackItem>
                                 <StackItem>React</StackItem>
                                 <StackItem>HTML</StackItem>
                                 <StackItem>CSS</StackItem>
                             </StackList>
-                        </StrongParagraph>
                     </InnerTextWrapper>
                 </TextWrapper>
                 <ImageWrapper>
@@ -73,6 +73,7 @@ const StrongParagraph = styled(Parag)`
 
 const StackList = styled.ul`
     display: flex;
+    font-weight: bold;
     flex-direction: column;
     flex-wrap: wrap;
     height: 100px;
