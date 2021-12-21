@@ -18,7 +18,7 @@ function WorkCard({title, summary, readMoreLink, visitLink, githubLink, src, sta
 
         <StackWrapper>
                 <StackList>
-                    {stack.map(el => <StackItem>{el}</StackItem>)}
+                    {stack.map((el, i) => <StackItem key={i}>{el}</StackItem>)}
                 </StackList>
         </StackWrapper>
 
