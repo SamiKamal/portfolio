@@ -8,7 +8,6 @@ import Paragraph from '../components/Texts/Paragraph'
 import { StackItem, StackList } from '../components/WorkCard'
 import Challenge1 from '../images/DIMAH-Challenge-1.png'
 import Challenge2 from '../images/DIMAH-Challenge-2.png'
-import Challenge3 from '../images/DIMAH-Challenge-3.png'
 
 function DidImeetahacker() {
     return (
