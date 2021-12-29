@@ -19,6 +19,7 @@ const Figure = styled.figure`
 
 const Image = styled.img`
     width: 100%;
+    border-radius: 8px;
 `
 
 const FigCap = styled.figcaption`

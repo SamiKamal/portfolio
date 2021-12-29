@@ -10,7 +10,7 @@ function SubHeading({children, symbol}, ...props) {
     )
 }
 
-const Heading = styled.h2`
+export const Heading = styled.h2`
     font-family: var(--font-secondary);
     font-size: ${36 / 16}rem;
     letter-spacing: 2px;

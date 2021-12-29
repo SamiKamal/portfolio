@@ -10,7 +10,7 @@ function Heading({children}, ...props) {
     )
 }
 
-const HeadingText = styled.h1`
+export const HeadingText = styled.h1`
     font-size: ${96 / 16}rem;
     line-height: 0.8;
     margin-bottom: 6px;

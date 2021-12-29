@@ -136,13 +136,13 @@ const StackWrapper = styled.div`
     margin-top: auto;
 `
 
-const StackList =  styled.ul`
+export const StackList =  styled.ul`
     display: flex;
     list-style: none;
     padding: 0;
 `
 
-const StackItem = styled.li`
+export const StackItem = styled.li`
 
     border-bottom: 3px solid var(--color-secondary);
 
