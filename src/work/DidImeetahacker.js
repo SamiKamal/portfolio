@@ -19,6 +19,7 @@ function DidImeetahacker() {
                     <StackItem>Node.js</StackItem>
                     <StackItem>Redux</StackItem>
                     <StackItem>Express.js</StackItem>
+                    <StackItem>MongoDB</StackItem>
                 </StackList>
                 And it has the following features:
                 <List>
