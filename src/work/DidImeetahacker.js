@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import BlogWrapper from '../components/BlogWrapper'
 import ImageBlog from '../components/ImageBlog'
 import Heading from '../components/Texts/Heading'
@@ -10,6 +10,10 @@ import Challenge1 from '../images/DIMAH-Challenge-1.png'
 import Challenge2 from '../images/DIMAH-Challenge-2.png'
 
 function DidImeetahacker() {
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <BlogWrapper>
             <Heading>Introduction</Heading>
