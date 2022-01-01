@@ -132,23 +132,20 @@ const WorkLink = styled(Link)`
 `
 
 const StackWrapper = styled.div`
-    margin: 16px 0;
     margin-top: auto;
 `
 
 export const StackList =  styled.ul`
     display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin: 16px 0;
     list-style: none;
     padding: 0;
 `
 
 export const StackItem = styled.li`
-
     border-bottom: 3px solid var(--color-secondary);
-
-    &:not(:last-child) {
-        margin-right: 16px;
-    }
 `
 
 
