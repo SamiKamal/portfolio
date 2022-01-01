@@ -32,6 +32,7 @@ function AboutPage() {
                             <StackList>
                                 <StackItem>Javascript</StackItem>
                                 <StackItem>React</StackItem>
+                                <StackItem>Redux</StackItem>
                                 <StackItem>HTML</StackItem>
                                 <StackItem>CSS</StackItem>
                             </StackList>
