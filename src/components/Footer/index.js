@@ -2,6 +2,7 @@ import React from 'react'
 import { GitHub, Twitter } from 'react-feather'
 import styled from 'styled-components'
 import { QUERIES } from '../../util/constants'
+import VisuallyHidden from '../../util/VisuallyHidden'
 
 function Footer() {
     return (
@@ -13,9 +14,11 @@ function Footer() {
                 <IconInnerWrapper>
                     <IconButton target="_blank" href="https://github.com/SamiKamal">
                         <GitHub/>
+                        <VisuallyHidden>Github Link Button</VisuallyHidden>
                     </IconButton>
                     <IconButton target="_blank" href="https://twitter.com/Samii_Dev">
                         <Twitter/>
+                        <VisuallyHidden>Twitter Link Button</VisuallyHidden>
                     </IconButton>
                 </IconInnerWrapper>
                 <MailButton target="_blank" href="mailto:me@samii.dev">

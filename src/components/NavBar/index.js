@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import LogoImage from '../../images/Logo.png'
 import { QUERIES } from '../../util/constants'
 import { animated, useTransition } from 'react-spring'
+import VisuallyHidden from '../../util/VisuallyHidden'
 
 
 function NavBar(p) {
@@ -35,6 +36,7 @@ function NavBar(p) {
         <Wrapper>
             <LogoWrapper to="/">
                 <Logo src={LogoImage} alt="My Personal Logo"/>
+                <VisuallyHidden>Logo, Click to return to home page</VisuallyHidden>
             </LogoWrapper>
             <NavList className='test'>
                 <NavItem><NavLink onClick={handleClick} name="/" active={isActive} to="/">Home</NavLink></NavItem>
@@ -44,6 +46,7 @@ function NavBar(p) {
             </NavList>
             <ButtonMenu onClick={() => setIsOpen(true)}>
                 <Menu/>
+                <VisuallyHidden>Open Menu Button</VisuallyHidden>
             </ButtonMenu>
 
             {transitions((styles, item) => {
@@ -52,6 +55,7 @@ function NavBar(p) {
                 <Content aria-label="Mobile Menu" style={{transform: styles.x.to(value => `translateX(${value}px)`)}}>
                     <ButtonMenu onClick={() => setIsOpen(false)}>
                         <X/>
+                        <VisuallyHidden>Close Menu Button</VisuallyHidden>
                     </ButtonMenu>
                     <NavListMobile className='test'>
                         <NavItem><NavLink onClick={handleClick} name="/" active={isActive} to="/">Home</NavLink></NavItem>

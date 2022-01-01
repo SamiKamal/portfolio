@@ -3,6 +3,7 @@ import { GitHub } from 'react-feather'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { QUERIES } from '../../util/constants'
+import VisuallyHidden from '../../util/VisuallyHidden'
 
 function WorkCard({title, summary, readMoreLink, visitLink, githubLink, src, stack}) {
     return (
@@ -28,9 +29,10 @@ function WorkCard({title, summary, readMoreLink, visitLink, githubLink, src, sta
                 <WorkLink target="_blank" as="a" href={visitLink}>Visit</WorkLink>
             </WorkLinksWrapper>
             <WorkIconsWrapper>
-                <ButtonIcon target="_blank" as="a" href={githubLink}>
+                {githubLink !== '/' ? <ButtonIcon target="_blank" as="a" href={githubLink}>
                     <GitHub/>
-                </ButtonIcon>
+                    <VisuallyHidden>Github Link Button</VisuallyHidden>
+                </ButtonIcon> : ''}
             </WorkIconsWrapper>
         </WorkFooter>
     </WorkProject>
