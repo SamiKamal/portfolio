@@ -58,7 +58,7 @@ function DidImeetahacker() {
                 <Paragraph>And the problems didn't stop there, I had a bug where the user can like the same report twice if he double-clicked and this one
                 was a nightmare, I spent 2 days just to understand why it happens and solve it.
             </Paragraph>
-            <SubHeading symbol="//">Add teamamte</SubHeading>
+            <SubHeading symbol="//">Add teammate</SubHeading>
             <Paragraph>
                 There's a feature I have when the user is filing a report where he can add the teammates of the cheater, and the user can add multiple teammates (max 10).
                 The problem I had is how to allow the user to add more teammates inputs, and how to keep track of them, and also allow the user to edit the previous input and delete it,
