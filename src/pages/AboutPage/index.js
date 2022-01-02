@@ -31,10 +31,12 @@ function AboutPage() {
                         </StrongParagraph>
                             <StackList>
                                 <StackItem>Javascript</StackItem>
+                                <StackItem>Typescript</StackItem>
                                 <StackItem>React</StackItem>
                                 <StackItem>Redux</StackItem>
                                 <StackItem>HTML</StackItem>
                                 <StackItem>CSS</StackItem>
+                                <StackItem>Git</StackItem>
                             </StackList>
                     </InnerTextWrapper>
                 </TextWrapper>
