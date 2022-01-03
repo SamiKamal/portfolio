@@ -44,8 +44,8 @@ html{
 }
 @font-face {
     font-family: "Dharma Gothic E";
-    src: url(${DharmaGothic}) format('woff2')
-         url(${DharmaGothicW}) format('woff')
+    src: url(${DharmaGothic}) format('woff2'),
+         url(${DharmaGothicW}) format('woff'),
          url(${DharmaGothicO}) format('opentype');
     font-weight: bold;
     font-style: italic;
