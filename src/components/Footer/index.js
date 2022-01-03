@@ -37,10 +37,9 @@ const Wrapper = styled.footer`
     margin-left: calc(var(--website-gap) * -1);
     margin-right: calc(var(--website-gap) * -1);
     padding: 16px 64px;
-    gap: 0 32px;
     display: flex;
     justify-content: space-between;
-
+    
     @media ${QUERIES.phoneAndSmaller} {
         flex-direction: column;
         align-items: center;

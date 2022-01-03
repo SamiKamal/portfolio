@@ -140,10 +140,17 @@ const StackWrapper = styled.div`
 export const StackList =  styled.ul`
     display: flex;
     flex-wrap: wrap;
-    gap: 8px 16px;
     margin: 16px 0;
     list-style: none;
     padding: 0;
+    gap: 8px 16px;
+    
+    
+    @supports not (gap: 8px 16px){
+        & > *:not(:last-child){
+            margin-right: 16px;
+        }
+    }
 `
 
 export const StackItem = styled.li`
