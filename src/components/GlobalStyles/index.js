@@ -185,7 +185,6 @@ p, h1, h2, h3, h4, h5, h6 {
 */
 #root, #__next {
   isolation: isolate;
-  -webkit-transform: translate3d(0, 0, 0);
 }
 `
 
