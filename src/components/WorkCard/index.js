@@ -25,7 +25,7 @@ function WorkCard({title, summary, readMoreLink, visitLink, githubLink, src, sta
 
         <WorkFooter>
             <WorkLinksWrapper>
-                <WorkLink to={readMoreLink}>Read More</WorkLink>
+                {readMoreLink ? <WorkLink to={readMoreLink}>Read More</WorkLink> : ''}
                 <WorkLink target="_blank" as="a" href={visitLink}>Visit</WorkLink>
             </WorkLinksWrapper>
             <WorkIconsWrapper>

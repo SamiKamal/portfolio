@@ -7,6 +7,7 @@ import SubHeading from '../../components/Texts/Sub-Heading'
 import SkullImage from '../../images/Hero main-image.png'
 import didimeetahackerCover from '../../images/didimeetahacker-cover.png'
 import reactcommerceCover from '../../images/react-commerce-cover.png'
+import todoListCover from '../../images/Todo-list-cover.png'
 import BackgroundImage from '../../images/Hero background-image.png'
 import {Fly, QUERIES} from '../../util/constants'
 import WorkCard from '../../components/WorkCard'
@@ -54,6 +55,15 @@ function HomePage() {
                     githubLink="https://github.com/SamiKamal/React-commerce"
                     src={reactcommerceCover}
                     stack={["React", "Redux"]}
+                    />
+
+                    <WorkCard
+                    title="Todo List"
+                    summary="a Todo list website with the ability to add multiple projects. Built in 2019"
+                    visitLink="https://to-do-app-3967f.web.app/"
+                    githubLink="https://github.com/SamiKamal/To-do-app"
+                    src={todoListCover}
+                    stack={["Javascript" , "Firebase"]}
                     />
                 </WorkList>
             </WorkWrapper>
