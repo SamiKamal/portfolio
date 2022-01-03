@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import DharmaGothic from "../../fonts/DharmaGothicE_ExBold_I.otf";
-import Arame from "../../fonts/Arame.ttf";
+import DharmaGothic from "../../fonts/DharmaGothicE_ExBold_I.woff2";
+import Arame from "../../fonts/Arame.woff2";
 import SourceCodeProBold from "../../fonts/SourceCodePro-Bold.woff2";
 import SourceCodeProRegular from "../../fonts/SourceCodePro-Regular.woff2";
 import { QUERIES } from "../../util/constants";
