@@ -40,7 +40,7 @@ function NavBar(p) {
             </LogoWrapper>
             <NavList className='test'>
                 <NavItem><NavLink onClick={handleClick} name="/" active={isActive} to="/">Home</NavLink></NavItem>
-                <NavItem><NavLink onClick={handleClick} name="work" as="a" href="/#work" active={isActive}>Work</NavLink></NavItem>
+                <NavItem><NavLink onClick={handleClick} name="projects" as="a" href="/#projects" active={isActive}>Projects</NavLink></NavItem>
                 <NavItem><NavLink onClick={handleClick} name="about" active={isActive} to="/about">About</NavLink></NavItem>
                 <NavItem><NavLink onClick={handleClick} name="contact" href="mailto:me@samii.dev" as="a" active={isActive}>Contact</NavLink></NavItem>
             </NavList>
@@ -59,7 +59,7 @@ function NavBar(p) {
                     </ButtonMenu>
                     <NavListMobile className='test'>
                         <NavItem><NavLink onClick={handleClick} name="/" active={isActive} to="/">Home</NavLink></NavItem>
-                        <NavItem><NavLink onClick={handleClick} name="work" as="a" href="/#work" active={isActive}>Work</NavLink></NavItem>
+                        <NavItem><NavLink onClick={handleClick} name="projects" as="a" href="/#projects" active={isActive}>Projects</NavLink></NavItem>
                         <NavItem><NavLink onClick={handleClick} name="about" active={isActive} to="/about">About</NavLink></NavItem>
                         <NavItem><NavLink onClick={handleClick} name="contact" href="mailto:me@samii.dev" as="a" active={isActive}>Contact</NavLink></NavItem>
                     </NavListMobile>

@@ -38,7 +38,7 @@ function App() {
         <Routes location={item}>
           <Route path="/" element={<HomePage/>}/>
           <Route path="/about" element={<AboutPage/>}/>
-          <Route path="/work/:name" element={<WorkPage/>}/>
+          <Route path="/projects/:name" element={<WorkPage/>}/>
 
         </Routes>
       <Footer/>

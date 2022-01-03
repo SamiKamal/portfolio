@@ -30,16 +30,16 @@ function HomePage() {
                 </ImageWrapper>
             </HeroWrapper>
 
-            <WorkWrapper id="work">
-                <Heading>Work</Heading>
+            <WorkWrapper id="projects">
+                <Heading>Projects</Heading>
                 <InnerTextWrapper>
-                    <SubHeading symbol="?">Latest work</SubHeading>
+                    <SubHeading symbol="?">Latest projects</SubHeading>
                 </InnerTextWrapper>
                 <WorkList>
                     <WorkCard
                     title="Did I meet a hacker"
                     summary="It’s a website that allow users to search and report hackers they meet in video games."
-                    readMoreLink="/work/didimeetahacker"
+                    readMoreLink="/projects/didimeetahacker"
                     visitLink="https://didimeetahacker.vercel.app/"
                     githubLink="/"
                     src={didimeetahackerCover}
@@ -49,7 +49,7 @@ function HomePage() {
                     <WorkCard
                     title="React Commerce"
                     summary="a website where you can buy furniture for your home."
-                    readMoreLink="/work/react-commerce"
+                    readMoreLink="/projects/react-commerce"
                     visitLink="https://react-commercee.netlify.app/"
                     githubLink="https://github.com/SamiKamal/React-commerce"
                     src={reactcommerceCover}
