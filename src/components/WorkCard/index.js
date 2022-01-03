@@ -150,6 +150,10 @@ export const StackList =  styled.ul`
         & > *:not(:last-child){
             margin-right: 16px;
         }
+        
+        & > * {
+            margin-bottom: 8px;
+        }
     }
 `
 
