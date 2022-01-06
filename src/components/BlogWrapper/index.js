@@ -17,6 +17,9 @@ const Wrapper = styled.article`
     margin: 0 auto;
     max-width: 763px;
     padding-bottom: 32px;
+    padding-right: var(--website-gap);
+    padding-left: var(--website-gap);
+
 
     ${Parag}{
         padding-bottom: 22px;
