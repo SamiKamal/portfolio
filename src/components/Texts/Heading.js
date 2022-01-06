@@ -17,6 +17,7 @@ export const HeadingText = styled.h1`
 
     @media ${QUERIES.phoneAndSmaller} {
         font-size: ${80 / 16}rem;
+        margin-bottom: 10px;
     }
 
 `

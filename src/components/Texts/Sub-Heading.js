@@ -27,6 +27,7 @@ export const Heading = styled.h2`
 
     @media ${QUERIES.phoneAndSmaller} {
         font-size: ${24 / 16}rem;
+        margin-bottom: 8px;
     }
 
 `
