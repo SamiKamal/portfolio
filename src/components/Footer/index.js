@@ -7,25 +7,27 @@ import VisuallyHidden from '../../util/VisuallyHidden'
 function Footer() {
     return (
         <Wrapper>
-            <TextWrapper>
-              &copy;  Sami Ibrahim {new Date().getFullYear()}
-            </TextWrapper>
-            <IconsWrapper>
-                <IconInnerWrapper>
-                    <IconButton target="_blank" href="https://github.com/SamiKamal">
-                        <GitHub/>
-                        <VisuallyHidden>Github Link Button</VisuallyHidden>
-                    </IconButton>
-                    <IconButton target="_blank" href="https://twitter.com/Samii_Dev">
-                        <Twitter/>
-                        <VisuallyHidden>Twitter Link Button</VisuallyHidden>
-                    </IconButton>
-                </IconInnerWrapper>
-                <MailButton target="_blank" href="mailto:me@samii.dev">
-                    me@samii.dev
-                </MailButton>
+            <InnerWrapper>
+                <TextWrapper>
+                &copy;  Sami Ibrahim {new Date().getFullYear()}
+                </TextWrapper>
+                <IconsWrapper>
+                    <IconInnerWrapper>
+                        <IconButton target="_blank" href="https://github.com/SamiKamal">
+                            <GitHub/>
+                            <VisuallyHidden>Github Link Button</VisuallyHidden>
+                        </IconButton>
+                        <IconButton target="_blank" href="https://twitter.com/Samii_Dev">
+                            <Twitter/>
+                            <VisuallyHidden>Twitter Link Button</VisuallyHidden>
+                        </IconButton>
+                    </IconInnerWrapper>
+                    <MailButton target="_blank" href="mailto:me@samii.dev">
+                        me@samii.dev
+                    </MailButton>
 
-            </IconsWrapper>
+                </IconsWrapper>
+            </InnerWrapper>
         </Wrapper>
     )
 }
@@ -34,17 +36,24 @@ const Wrapper = styled.footer`
     color: var(--color-grey-text-secondary);
     text-transform: uppercase;
     background: var(--color-background-secondary);
-    margin-left: calc(var(--website-gap) * -1);
-    margin-right: calc(var(--website-gap) * -1);
-    padding: 16px 64px;
-    display: flex;
-    justify-content: space-between;
     
     @media ${QUERIES.phoneAndSmaller} {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
+
+`
+
+const InnerWrapper = styled.div`
+    padding: 16px 64px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1920px;
+    padding-right: var(--website-gap);
+    padding-left: var(--website-gap);
+    margin: 0 auto;
+
 
 `
 

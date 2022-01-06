@@ -128,11 +128,15 @@ h2,h3,h4,h5,h6{
 }
 
 #root{
-  max-width: 1920px;
-  padding: 0 var(--website-gap);
-  margin: 0 auto;
   min-height: 100%;
 
+  section, nav {
+    max-width: 1920px;
+    padding-right: var(--website-gap);
+    padding-left: var(--website-gap);
+    margin: 0 auto;
+
+  }
 }
 /*
   1. Use a more-intuitive box-sizing model.
