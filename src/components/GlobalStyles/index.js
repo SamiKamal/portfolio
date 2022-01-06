@@ -123,6 +123,7 @@ body {
 
 h1{
   font-family: var(--font-primary);
+  font-style: italic;
 }
 
 h2,h3,h4,h5,h6{
