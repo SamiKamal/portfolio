@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import DharmaGothic from "../../fonts/DharmaGothicE_ExBold_I.woff2";
 import DharmaGothicW from "../../fonts/dharmagothice_exbold_i.woff";
 import DharmaGothicO from "../../fonts/DharmaGothicE_ExBold_I.otf";
+import DharmaGothicT from "../../fonts/DharmaGothicE_ExBold_I.ttf";
 import Arame from "../../fonts/Arame.woff2";
 import SourceCodeProBold from "../../fonts/SourceCodePro-Bold.woff2";
 import SourceCodeProRegular from "../../fonts/SourceCodePro-Regular.woff2";
@@ -46,6 +47,7 @@ html{
     font-family: "Dharma Gothic E";
     src: url(${DharmaGothic}) format('woff2'),
          url(${DharmaGothicW}) format('woff'),
+         url(${DharmaGothicT}) format('truetype'),
          url(${DharmaGothicO}) format('opentype');
     font-weight: bold;
     font-style: italic;
