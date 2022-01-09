@@ -1,99 +1,90 @@
-import React from 'react'
-import { GitHub, Twitter } from 'react-feather'
-import styled from 'styled-components'
-import { QUERIES } from '../../util/constants'
-import VisuallyHidden from '../../util/VisuallyHidden'
+import React from "react";
+import { GitHub, Twitter } from "react-feather";
+import styled from "styled-components";
+import { QUERIES } from "../../util/constants";
+import VisuallyHidden from "../../util/VisuallyHidden";
 
 function Footer() {
-    return (
-        <Wrapper>
-            <InnerWrapper>
-                <TextWrapper>
-                &copy;  Sami Ibrahim {new Date().getFullYear()}
-                </TextWrapper>
-                <IconsWrapper>
-                    <IconInnerWrapper>
-                        <IconButton target="_blank" href="https://github.com/SamiKamal">
-                            <GitHub/>
-                            <VisuallyHidden>Github Link Button</VisuallyHidden>
-                        </IconButton>
-                        <IconButton target="_blank" href="https://twitter.com/Samii_Dev">
-                            <Twitter/>
-                            <VisuallyHidden>Twitter Link Button</VisuallyHidden>
-                        </IconButton>
-                    </IconInnerWrapper>
-                    <MailButton target="_blank" href="mailto:me@samii.dev">
-                        me@samii.dev
-                    </MailButton>
-
-                </IconsWrapper>
-            </InnerWrapper>
-        </Wrapper>
-    )
+  return (
+    <Wrapper>
+      <InnerWrapper>
+        <TextWrapper>&copy; Sami Ibrahim {new Date().getFullYear()}</TextWrapper>
+        <IconsWrapper>
+          <IconInnerWrapper>
+            <IconButton target="_blank" href="https://github.com/SamiKamal">
+              <GitHub />
+              <VisuallyHidden>Github Link Button</VisuallyHidden>
+            </IconButton>
+            <IconButton target="_blank" href="https://twitter.com/Samii_Dev">
+              <Twitter />
+              <VisuallyHidden>Twitter Link Button</VisuallyHidden>
+            </IconButton>
+          </IconInnerWrapper>
+          <MailButton target="_blank" href="mailto:me@samii.dev">
+            me@samii.dev
+          </MailButton>
+        </IconsWrapper>
+      </InnerWrapper>
+    </Wrapper>
+  );
 }
 
 const Wrapper = styled.footer`
-    color: var(--color-grey-text-secondary);
-    text-transform: uppercase;
-    background: var(--color-background-secondary);
-    
-    @media ${QUERIES.phoneAndSmaller} {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+  color: var(--color-grey-text-secondary);
+  text-transform: uppercase;
+  background: var(--color-background-secondary);
 
-`
+  @media ${QUERIES.phoneAndSmaller} {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+`;
 
 const InnerWrapper = styled.div`
-    padding: 16px 64px;
-    display: flex;
-    justify-content: space-between;
-    max-width: 1920px;
-    padding-right: var(--website-gap);
-    padding-left: var(--website-gap);
-    margin: 0 auto;
+  padding: 16px 64px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1920px;
+  padding-right: var(--website-gap);
+  padding-left: var(--website-gap);
+  margin: 0 auto;
+`;
 
-
-`
-
-const TextWrapper = styled.p`
-`
+const TextWrapper = styled.p``;
 
 const IconsWrapper = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-    @media ${QUERIES.phoneAndSmaller} {
-        flex-direction: column;
-        margin-top: 32px;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
-`
+  @media ${QUERIES.phoneAndSmaller} {
+    flex-direction: column;
+    margin-top: 32px;
+  }
+`;
 
 const IconButton = styled.a`
-    color: inherit;
-    margin-right: 16px;    
+  color: inherit;
+  margin-right: 16px;
 
-    & > *:hover {
-        filter: brightness(1.3);
-    }
-`
+  & > *:hover {
+    filter: brightness(1.3);
+  }
+`;
 
 const IconInnerWrapper = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: end;
-`
+  display: flex;
+  justify-content: center;
+  align-items: end;
+`;
 
 const MailButton = styled(IconButton)`
-    text-transform: initial;
+  text-transform: initial;
 
-    @media ${QUERIES.phoneAndSmaller} {
-        margin-top: 16px;
-    }
+  @media ${QUERIES.phoneAndSmaller} {
+    margin-top: 16px;
+  }
+`;
 
-`
-
-export default Footer
+export default Footer;

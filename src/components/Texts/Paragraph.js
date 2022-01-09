@@ -1,24 +1,19 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-function Paragraph({children}, ...props) {
-    return (
-        <Parag {...props}>
-            {children}
-        </Parag>
-    )
+function Paragraph({ children }, ...props) {
+  return <Parag {...props}>{children}</Parag>;
 }
 
 export const Parag = styled.p`
-    
-    & a {
-        color: inherit;
-        transition: color 250ms;
+  & a {
+    color: inherit;
+    transition: color 250ms;
 
-        &:hover{
-            color: var(--color-secondary);
-        }
+    &:hover {
+      color: var(--color-secondary);
     }
-`
+  }
+`;
 
-export default Paragraph
+export default Paragraph;

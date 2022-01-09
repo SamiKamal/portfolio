@@ -4,10 +4,9 @@ import DharmaGothicW from "../../fonts/dharmagothice_exbold_i.woff";
 import DharmaGothicO from "../../fonts/DharmaGothicE_ExBold_I.otf";
 import DharmaGothicT from "../../fonts/DharmaGothicE_ExBold_I.ttf";
 import Arame from "../../fonts/Arame.woff2";
-import FiraCodeRegular from '../../fonts/FiraCode-Regular.woff2'
-import FiraCodeBold from '../../fonts/FiraCode-Bold.woff2'
+import FiraCodeRegular from "../../fonts/FiraCode-Regular.woff2";
+import FiraCodeBold from "../../fonts/FiraCode-Bold.woff2";
 import { QUERIES } from "../../util/constants";
-
 
 const GlobalStyles = createGlobalStyle`
 html{
@@ -200,6 +199,6 @@ p, h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
-`
+`;
 
-export default GlobalStyles
+export default GlobalStyles;

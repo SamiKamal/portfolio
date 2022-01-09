@@ -1,25 +1,20 @@
-import React from 'react'
-import styled from 'styled-components'
-import { QUERIES } from '../../util/constants'
+import React from "react";
+import styled from "styled-components";
+import { QUERIES } from "../../util/constants";
 
-function Heading({children}, ...props) {
-    return (
-        <HeadingText {...props}>
-            {children}
-        </HeadingText>
-    )
+function Heading({ children }, ...props) {
+  return <HeadingText {...props}>{children}</HeadingText>;
 }
 
 export const HeadingText = styled.h1`
-    font-size: ${96 / 16}rem;
-    line-height: 0.8;
-    margin-bottom: 6px;
+  font-size: ${96 / 16}rem;
+  line-height: 0.8;
+  margin-bottom: 6px;
 
-    @media ${QUERIES.phoneAndSmaller} {
-        font-size: ${80 / 16}rem;
-        margin-bottom: 10px;
-    }
+  @media ${QUERIES.phoneAndSmaller} {
+    font-size: ${80 / 16}rem;
+    margin-bottom: 10px;
+  }
+`;
 
-`
-
-export default Heading
+export default Heading;
