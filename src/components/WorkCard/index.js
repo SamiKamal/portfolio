@@ -104,6 +104,7 @@ const WorkTextWrapper = styled.div`
 `
 
 const WorkHeader = styled.h3`
+    margin-bottom: 4px;
 `
 
 const WorkSummary = styled.p`

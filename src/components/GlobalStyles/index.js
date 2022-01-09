@@ -4,8 +4,8 @@ import DharmaGothicW from "../../fonts/dharmagothice_exbold_i.woff";
 import DharmaGothicO from "../../fonts/DharmaGothicE_ExBold_I.otf";
 import DharmaGothicT from "../../fonts/DharmaGothicE_ExBold_I.ttf";
 import Arame from "../../fonts/Arame.woff2";
-import SourceCodeProBold from "../../fonts/SourceCodePro-Bold.woff2";
-import SourceCodeProRegular from "../../fonts/SourceCodePro-Regular.woff2";
+import FiraCodeRegular from '../../fonts/FiraCode-Regular.woff2'
+import FiraCodeBold from '../../fonts/FiraCode-Bold.woff2'
 import { QUERIES } from "../../util/constants";
 
 
@@ -25,7 +25,7 @@ html{
 
   --font-primary: "Dharma Gothic E", sans-serif;
   --font-secondary: "Arame", monospace;
-  --font-regular: "Source Code Pro", monospace;
+  --font-regular: "Fira Code", monospace;
 
   --website-gap: 64px;
 
@@ -43,6 +43,7 @@ html{
     src: url(${Arame});
     font-display: swap;
 }
+
 @font-face {
     font-family: "Dharma Gothic E";
     src: url(${DharmaGothic}) format('woff2'),
@@ -53,19 +54,21 @@ html{
     font-style: italic;
     font-display: swap;
 }
+
 @font-face {
-    font-family: "Source Code Pro";
-    src: url(${SourceCodeProBold});
+    font-family: "Fira Code";
+    src: url(${FiraCodeRegular});
     font-display: swap;
     font-weight: normal;
 }
 
 @font-face {
-    font-family: "Source Code Pro";
-    src: url(${SourceCodeProRegular});
+    font-family: "Fira Code";
+    src: url(${FiraCodeBold});
     font-display: swap;
     font-weight: bold;
 }
+
 
 ::selection{
   color: black;
@@ -169,7 +172,7 @@ body {
 }
 
 p,span{
-  line-height: 1.5;
+  line-height: 1.75;
 }
 /*
   6. Improve media defaults
