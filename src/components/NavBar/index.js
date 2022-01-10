@@ -7,11 +7,13 @@ import LogoImage from "../../images/Logo.png";
 import { QUERIES } from "../../util/constants";
 import { animated, useTransition } from "react-spring";
 import VisuallyHidden from "../../util/VisuallyHidden";
+import Modal from "../Modal";
 
 function NavBar() {
   const location = useLocation();
   const [isActive, setIsActive] = useState(() => location.pathname.split("/")[1] || "/");
   const [isOpen, setIsOpen] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   const transitions = useTransition(isOpen, {
     from: { opacity: 0, x: 100 },
     enter: { opacity: 1, x: 0 },
@@ -28,6 +30,11 @@ function NavBar() {
   const handleClick = (e) => {
     setIsActive(e.target.name);
     setIsOpen(false);
+  };
+
+  const handleContactOnClick = (e) => {
+    setModalIsOpen(true);
+    handleClick(e);
   };
 
   return (
@@ -54,9 +61,9 @@ function NavBar() {
         </NavItem>
         <NavItem>
           <NavLink
-            onClick={handleClick}
+            onClick={handleContactOnClick}
             name="contact"
-            href="mailto:me@samii.dev"
+            // href="mailto:me@samii.dev"
             as="a"
             active={isActive}
           >
@@ -109,9 +116,9 @@ function NavBar() {
                   </NavItem>
                   <NavItem>
                     <NavLink
-                      onClick={handleClick}
+                      onClick={handleContactOnClick}
                       name="contact"
-                      href="mailto:me@samii.dev"
+                      // href="mailto:me@samii.dev"
                       as="a"
                       active={isActive}
                     >
@@ -124,6 +131,13 @@ function NavBar() {
           )
         );
       })}
+      <Modal test="ss" isOpen={modalIsOpen} onDismiss={() => setModalIsOpen(false)}>
+        <div>This will open your default mail app, are you sure you want to continue?</div>
+        <ModalButtonsWrapper>
+          <OpenMailButton href="mailto:me@samii.dev">Yes</OpenMailButton>
+          <CloseMailButton onClick={() => setModalIsOpen(false)}>Cancel</CloseMailButton>
+        </ModalButtonsWrapper>
+      </Modal>
     </Wrapper>
   );
 }
@@ -226,6 +240,42 @@ const NavListMobile = styled(NavList)`
 
   & > *:not(:last-child) {
     margin-bottom: 32px;
+  }
+`;
+
+const ModalButtonsWrapper = styled.div`
+  padding-top: 32px;
+  display: flex;
+  justify-content: flex-end;
+`;
+
+const OpenMailButton = styled.a`
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 6px 16px;
+  transition: color 450ms ease, background-color 450ms ease;
+
+  &:hover {
+    background: white;
+    color: black;
+    transition: color 250ms ease, background-color 250ms ease-in-out;
+  }
+
+  &:focus {
+    outline-offset: 2px;
+  }
+`;
+
+const CloseMailButton = styled.button`
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  transition: color 250ms;
+
+  &:hover {
+    color: var(--color-grey-text-hover);
   }
 `;
 
