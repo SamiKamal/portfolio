@@ -14,14 +14,15 @@ const Overlay = styled(DialogOverlay)`
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  height: 100%;
+  max-height: 100vh;
+  width: 100vw;
   background: hsla(0 0% 0% / 0.5);
 `;
 
 const Content = styled(DialogContent)`
   position: absolute;
-  top: 25%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 500px;
