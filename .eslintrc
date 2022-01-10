@@ -8,7 +8,7 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 13,
+    "ecmaVersion": 2017,
     "sourceType": "module"
   },
   "plugins": ["react"],
