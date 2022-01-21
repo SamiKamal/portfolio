@@ -131,7 +131,7 @@ function NavBar() {
           )
         );
       })}
-      <Modal test="ss" isOpen={modalIsOpen} onDismiss={() => setModalIsOpen(false)}>
+      <Modal isOpen={modalIsOpen} onDismiss={() => setModalIsOpen(false)}>
         <div>This will open your default mail app, are you sure you want to continue?</div>
         <ModalButtonsWrapper>
           <OpenMailButton href="mailto:me@samii.dev">Yes</OpenMailButton>
@@ -243,13 +243,13 @@ const NavListMobile = styled(NavList)`
   }
 `;
 
-const ModalButtonsWrapper = styled.div`
+export const ModalButtonsWrapper = styled.div`
   padding-top: 32px;
   display: flex;
   justify-content: flex-end;
 `;
 
-const OpenMailButton = styled.a`
+export const OpenMailButton = styled.a`
   color: inherit;
   text-decoration: none;
   border: 1px solid white;
@@ -267,7 +267,7 @@ const OpenMailButton = styled.a`
   }
 `;
 
-const CloseMailButton = styled.button`
+export const CloseMailButton = styled.button`
   background: none;
   border: none;
   color: inherit;
