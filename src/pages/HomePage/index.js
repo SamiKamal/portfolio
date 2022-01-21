@@ -62,10 +62,11 @@ function HomePage() {
           <WorkCard
             title="Todo List"
             summary="a Todo list website with the ability to add multiple projects. Built in 2019"
+            readMoreLink="/projects/todowebsite"
             visitLink="https://to-do-app-3967f.web.app/"
             githubLink="https://github.com/SamiKamal/To-do-app"
             src={todoListCover}
-            stack={["Javascript", "Firebase"]}
+            stack={["Javascript", "Firebase", "Google Cloud Integration"]}
           />
         </WorkList>
       </WorkWrapper>
