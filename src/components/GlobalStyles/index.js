@@ -10,6 +10,8 @@ import { QUERIES } from "../../util/constants";
 
 const GlobalStyles = createGlobalStyle`
 html{
+  position: relative;
+
   --reach-dialog: 1;
 
   --color-primary: hsl(0, 0%, 60%);
@@ -99,10 +101,17 @@ html{
 
 
 body {
+  --footer-height: 60px;
   background-color: var(--color-background);
   color: var(--color-white);
   font-family: var(--font-regular);
   overflow-x: hidden;
+  margin-bottom: var(--footer-height);
+
+  @media ${QUERIES.phoneAndSmaller} {
+    --footer-height: 152px;
+  }
+
 }
 
 @supports (filter: blur(345.36px)) {

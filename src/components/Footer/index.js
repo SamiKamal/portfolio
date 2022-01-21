@@ -33,6 +33,11 @@ const Wrapper = styled.footer`
   color: var(--color-grey-text-secondary);
   text-transform: uppercase;
   background: var(--color-background-secondary);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--footer-height);
 
   @media ${QUERIES.phoneAndSmaller} {
     flex-direction: column;
@@ -49,6 +54,11 @@ const InnerWrapper = styled.div`
   padding-right: var(--website-gap);
   padding-left: var(--website-gap);
   margin: 0 auto;
+
+  @media ${QUERIES.phoneAndSmaller} {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const TextWrapper = styled.p``;
