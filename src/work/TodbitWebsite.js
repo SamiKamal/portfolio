@@ -6,7 +6,7 @@ import { List, ListItem } from "../components/Texts/List";
 import Paragraph from "../components/Texts/Paragraph";
 import { StackItem, StackList } from "../components/WorkCard";
 
-function TodoWebstie() {
+function TodbitWebsite() {
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -15,7 +15,7 @@ function TodoWebstie() {
     <BlogWrapper>
       <Heading>Introduction</Heading>
       <Paragraph>
-        a Todo app to manage your tasks and projects. The website is built using:
+        A website to orgnize your projects and tasks. The website is built using:
         <StackList>
           <StackItem>Vanilla Javascript</StackItem>
           <StackItem>Firebase</StackItem>
@@ -51,4 +51,4 @@ function TodoWebstie() {
   );
 }
 
-export default TodoWebstie;
+export default TodbitWebsite;

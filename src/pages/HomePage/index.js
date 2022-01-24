@@ -7,7 +7,7 @@ import SubHeading from "../../components/Texts/Sub-Heading";
 import SkullImage from "../../images/Hero main-image.png";
 import didimeetahackerCover from "../../images/didimeetahacker-cover.png";
 import reactcommerceCover from "../../images/react-commerce-cover.png";
-import todoListCover from "../../images/Todo-list-cover.png";
+import todbitCover from "../../images/Todbit-cover.png";
 import BackgroundImage from "../../images/Hero background-image.png";
 import { Fly, QUERIES } from "../../util/constants";
 import WorkCard from "../../components/WorkCard";
@@ -60,12 +60,12 @@ function HomePage() {
           />
 
           <WorkCard
-            title="Todo List"
-            summary="a Todo list website with the ability to add multiple projects. Built in 2019"
-            readMoreLink="/projects/todowebsite"
+            title="Todbit"
+            summary="A website to orgnize your projects and tasks. Built in 2019"
+            readMoreLink="/projects/todbitwebsite"
             visitLink="https://to-do-app-3967f.web.app/"
-            githubLink="https://github.com/SamiKamal/To-do-app"
-            src={todoListCover}
+            githubLink="https://github.com/SamiKamal/Todbit"
+            src={todbitCover}
             stack={["Javascript", "Firebase", "Google Cloud Integration"]}
           />
         </WorkList>
