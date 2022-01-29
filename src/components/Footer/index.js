@@ -33,10 +33,6 @@ const Wrapper = styled.footer`
   color: var(--color-grey-text-secondary);
   text-transform: uppercase;
   background: var(--color-background-secondary);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   height: var(--footer-height);
 
   @media ${QUERIES.phoneAndSmaller} {

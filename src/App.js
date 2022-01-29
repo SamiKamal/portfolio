@@ -31,7 +31,7 @@ function App() {
       <AnimatedWrapper style={spring}>
         <img src={Logo} alt="My logo" />
       </AnimatedWrapper>
-      <animated.div style={props}>
+      <AnimatedInnerWrapper style={props}>
         <NavBar />
         <Routes location={item}>
           <Route path="/" element={<HomePage />} />
@@ -39,7 +39,7 @@ function App() {
           <Route path="/projects/:name" element={<WorkPage />} />
         </Routes>
         <Footer />
-      </animated.div>
+      </AnimatedInnerWrapper>
     </>
   ));
 }
@@ -57,6 +57,17 @@ const AnimatedWrapper = styled(animated.div)`
 
   img {
     max-width: 328px;
+  }
+`;
+
+const AnimatedInnerWrapper = styled(animated.div)`
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+
+  & > * {
+    width: 100%;
   }
 `;
 

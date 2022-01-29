@@ -101,16 +101,10 @@ html{
 
 
 body {
-  --footer-height: 60px;
   background-color: var(--color-background);
   color: var(--color-white);
   font-family: var(--font-regular);
   overflow-x: hidden;
-  margin-bottom: var(--footer-height);
-
-  @media ${QUERIES.phoneAndSmaller} {
-    --footer-height: 152px;
-  }
 
 }
 
