@@ -114,7 +114,7 @@ body {
 
 }
 
-@supports (filter: blur(345.36px)) {
+@supports (filter: blur(100px)) {
   body::after{
     content: '';
     position: absolute;
@@ -127,8 +127,10 @@ body {
     border-radius: 50%;
     background: radial-gradient(hsla(90 100% 50% / .21), hsla(155 85% 59% / 0.22));
     transform: translate(-50%, -50%);
-    filter: blur(345.36px);
+    filter: blur(100px);
+    opacity: 0.6;
     pointer-events: none;
+    z-index: -1;
   }  
 }
 
