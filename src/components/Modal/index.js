@@ -2,10 +2,10 @@ import React from "react";
 import { DialogOverlay, DialogContent } from "@reach/dialog";
 import styled from "styled-components";
 
-function Modal({ children, isOpen, onDismiss }) {
+function Modal({ children, isOpen, onDismiss, label }) {
   return (
     <Overlay isOpen={isOpen} onDismiss={onDismiss}>
-      <Content>{children}</Content>
+      <Content aria-label={label ? label : "alert"}>{children}</Content>
     </Overlay>
   );
 }
