@@ -66,7 +66,7 @@ function HomePage() {
             visitLink="https://to-do-app-3967f.web.app/"
             githubLink="https://github.com/SamiKamal/Todbit"
             src={todbitCover}
-            stack={["Javascript", "Firebase", "Google Cloud Integration"]}
+            stack={["Javascript", "Firebase", "Google Cloud"]}
           />
         </WorkList>
       </WorkWrapper>

@@ -23,7 +23,7 @@ function TodbitWebsite() {
         <StackList>
           <StackItem>Vanilla Javascript</StackItem>
           <StackItem>Firebase</StackItem>
-          <StackItem>Google Cloud Integration</StackItem>
+          <StackItem>Google Cloud</StackItem>
         </StackList>
         And it has the following features:
         <List>
