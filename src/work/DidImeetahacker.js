@@ -19,8 +19,12 @@ function DidImeetahacker() {
     <BlogWrapper>
       <Heading>Introduction</Heading>
       <Paragraph>
-        "Did I meet a hacker" is a website for gamers to see if there are reports on the
-        "suspicious" player they met. The website is built using:
+        "
+        <a target="_blank" href="https://www.didimeetahacker.com/" rel="noreferrer">
+          Did I meet a hacker
+        </a>
+        " is a website for gamers to see if there are reports on the "suspicious" player they met.
+        The website is built using:
         <StackList>
           <StackItem>React</StackItem>
           <StackItem>Node.js</StackItem>

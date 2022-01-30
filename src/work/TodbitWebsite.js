@@ -15,7 +15,11 @@ function TodbitWebsite() {
     <BlogWrapper>
       <Heading>Introduction</Heading>
       <Paragraph>
-        A website to orgnize your projects and tasks. The website is built using:
+        "
+        <a href="https://to-do-app-3967f.web.app/" target="_blank" rel="noreferrer">
+          Todbit
+        </a>
+        " is a website to orgnize your projects and tasks. The website is built using:
         <StackList>
           <StackItem>Vanilla Javascript</StackItem>
           <StackItem>Firebase</StackItem>

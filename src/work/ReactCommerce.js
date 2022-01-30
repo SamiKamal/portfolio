@@ -18,7 +18,11 @@ function ReactCommerce() {
     <BlogWrapper>
       <Heading>Introduction</Heading>
       <Paragraph>
-        "React Commerce" is an e-commerce website built using:
+        "
+        <a target="_blank" href="https://react-commercee.netlify.app/" rel="noreferrer">
+          React Commerce
+        </a>
+        " is an e-commerce website built using:
         <StackList>
           <StackItem>React</StackItem>
           <StackItem>Redux</StackItem>
