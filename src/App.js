@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { animated, useChain, useSpring, useSpringRef, useTransition } from "react-spring";
+import { animated, useChain, useSpringRef, useTransition } from "react-spring";
 import styled from "styled-components";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
@@ -9,18 +9,21 @@ import WorkPage from "./pages/WorkPage";
 import Logo from "./images/Logo.png";
 
 function App() {
+  const location = useLocation();
   const springRef = useSpringRef();
-  const spring = useSpring({
+  const spring = useTransition(location, {
     ref: springRef,
+    keys: location.pathname,
     from: {
       y: "-100%",
     },
-    to: [{ y: "0" }, { y: "0" }, { y: "-100%" }],
+    enter: [{ y: "0" }, { y: "0" }, { y: "-100%" }],
+    leave: { y: "-100" },
   });
-  const location = useLocation();
   const transitionRef = useSpringRef();
   const transitions = useTransition(location, {
     ref: transitionRef,
+    keys: location.pathname,
     from: { opacity: 0 },
     enter: { opacity: 1 },
   });
@@ -28,9 +31,11 @@ function App() {
 
   return transitions((props, item) => (
     <>
-      <AnimatedWrapper style={spring}>
-        <img src={Logo} alt="My logo" />
-      </AnimatedWrapper>
+      {spring((styleProps) => (
+        <AnimatedWrapper style={styleProps}>
+          <img src={Logo} alt="My logo" />
+        </AnimatedWrapper>
+      ))}
       <AnimatedInnerWrapper style={props}>
         <NavBar />
         <Routes location={item}>
