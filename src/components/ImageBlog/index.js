@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 function ImageBlog({ src, alt, children }) {
-  console.log(src, alt);
   return (
     <Figure>
       <Image src={src} alt={alt} />
