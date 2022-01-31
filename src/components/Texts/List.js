@@ -16,6 +16,11 @@ const ListWrapper = styled.ul`
 `;
 
 const ListItemWrapper = styled.li`
+  line-height: 1.75;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
   &::before {
     content: "•";
     color: var(--color-secondary);

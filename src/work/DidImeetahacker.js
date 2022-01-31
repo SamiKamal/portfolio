@@ -109,23 +109,26 @@ function DidImeetahacker() {
         solution.
       </Paragraph>
       <Heading>Leassons learned</Heading>
-      <List>
-        <ListItem>
-          Don't re-invent the wheel, for example, there's a notification system on the website to
-          inform the user if he logged in, or logged out, etc. And I was thinking of implementing
-          the whole functionality (which would cost me 2 days maybe?), but then by mistake, I found
-          a library providing the same feature I want (and more) and it cost me 1 hour at most.
-        </ListItem>
-        <ListItem>
-          Accessibility, I focused a lot on accessibility and made the website easier for keyboard
-          navigation and screen-readers.
-        </ListItem>
-        <ListItem>
-          Usable code. I can't stress enough how it made my life easier and helped me build scalable
-          code, For almost every component I wrote I made it usable which reduced the number of
-          components I have without increasing the complexity of my code.
-        </ListItem>
-      </List>
+      <Paragraph>
+        <List>
+          <ListItem>
+            Don't re-invent the wheel, for example, there's a notification system on the website to
+            inform the user if he logged in, or logged out, etc. And I was thinking of implementing
+            the whole functionality (which would cost me 2 days maybe?), but then by mistake, I
+            found a library providing the same feature I want (and more) and it cost me 1 hour at
+            most.
+          </ListItem>
+          <ListItem>
+            Accessibility, I focused a lot on accessibility and made the website easier for keyboard
+            navigation and screen-readers.
+          </ListItem>
+          <ListItem>
+            Usable code. I can't stress enough how it made my life easier and helped me build
+            scalable code, For almost every component I wrote I made it usable which reduced the
+            number of components I have without increasing the complexity of my code.
+          </ListItem>
+        </List>
+      </Paragraph>
     </BlogWrapper>
   );
 }
