@@ -75,7 +75,7 @@ function DidImeetahacker() {
         make sure the user won't be able to like the same report twice? all of these decisions were
         quite hard and I had to think of all the outcomes.
       </Paragraph>
-      <ImageBlog src={Challenge1}>
+      <ImageBlog alt="Code example" src={Challenge1}>
         Code example showing the back-end side of the like & dislike functionality
       </ImageBlog>
       <Paragraph>
@@ -95,7 +95,7 @@ function DidImeetahacker() {
         property. It was a simple solution, but because I overthought it previously I solved it in a
         complicated way.
       </Paragraph>
-      <ImageBlog src={Challenge2}>
+      <ImageBlog alt="Code example" src={Challenge2}>
         Code example showing the functions to add and delete teammate
       </ImageBlog>
       <SubHeading symbol="//">Search functionality</SubHeading>

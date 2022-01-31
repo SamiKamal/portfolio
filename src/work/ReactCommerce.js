@@ -76,7 +76,9 @@ function ReactCommerce() {
         original array. It was an interesting solution to solve and the concept of "immutability"
         had served me a lot since then.
       </Paragraph>
-      <ImageBlog src={Challenge1}>Code example showing the InitialState variable</ImageBlog>
+      <ImageBlog alt="Code example" src={Challenge1}>
+        Code example showing the InitialState variable
+      </ImageBlog>
       <Heading>Leassons learned</Heading>
       <List>
         <ListItem>Immutability</ListItem>
