@@ -27,10 +27,10 @@ function WorkCard({ title, summary, readMoreLink, visitLink, githubLink, src, st
 
       <WorkFooter>
         <WorkLinksWrapper>
-          {readMoreLink ? <WorkLink to={readMoreLink}>Read More</WorkLink> : ""}
-          <WorkLink target="_blank" as="a" href={visitLink}>
+          {readMoreLink ? <ReadMeLinkButton to={readMoreLink}>Read More</ReadMeLinkButton> : ""}
+          <VisitLinkButton target="_blank" as="a" href={visitLink}>
             Visit
-          </WorkLink>
+          </VisitLinkButton>
         </WorkLinksWrapper>
         <WorkIconsWrapper>
           {githubLink !== "/" ? (
@@ -112,18 +112,49 @@ const WorkFooter = styled.footer`
   margin-top: auto;
 `;
 
-const WorkLinksWrapper = styled.div``;
-
-const WorkLink = styled(Link)`
-  color: inherit;
-  transition: color 250ms;
-
-  &:not(:last-child) {
+const WorkLinksWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  & > *:not(:last-child) {
     margin-right: 16px;
   }
 
+  @supports (gap: 16px) {
+    gap: 16px;
+
+    & > *:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+`;
+
+const ReadMeLinkButton = styled(Link)`
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 6px 16px;
+  transition: color 450ms ease, background-color 450ms ease;
+  color: black;
+  background: white;
+
   &:hover {
-    color: var(--color-secondary);
+    color: inherit;
+    background: transparent;
+    transition: color 250ms ease, background-color 250ms ease-in-out;
+  }
+
+  &:focus {
+    outline-offset: 2px;
+  }
+`;
+
+const VisitLinkButton = styled(ReadMeLinkButton)`
+  color: inherit;
+  background: transparent;
+
+  &:hover {
+    color: black;
+    background: white;
+    transition: color 250ms ease, background-color 250ms ease-in-out;
   }
 `;
 
