@@ -103,6 +103,14 @@ const InnerTextWrapper = styled.div`
   padding-left: var(--gap);
   max-width: calc(660px + var(--gap));
 
+  a {
+    color: var(--color-secondary);
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
   @media ${QUERIES.tabletAndSmaller} {
     --gap: 32px;
   }
