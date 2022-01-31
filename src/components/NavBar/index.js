@@ -175,7 +175,7 @@ const NavItem = styled.li`
   cursor: pointer;
 
   &:not(:last-child) {
-    margin-right: 16px;
+    margin-right: 32px;
   }
 `;
 
