@@ -131,7 +131,13 @@ function NavBar() {
           )
         );
       })}
-      <Modal isOpen={modalIsOpen} onDismiss={() => setModalIsOpen(false)}>
+      <Modal
+        isOpen={modalIsOpen}
+        onDismiss={() => {
+          setModalIsOpen(false);
+          setIsActive(() => location.pathname.split("/")[1] || "/");
+        }}
+      >
         <div>This will open your default mail app, are you sure you want to continue?</div>
         <ModalButtonsWrapper>
           <OpenMailButton
