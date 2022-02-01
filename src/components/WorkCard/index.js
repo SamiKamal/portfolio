@@ -109,6 +109,7 @@ const WorkSummary = styled.p`
 const WorkFooter = styled.footer`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: auto;
 `;
 
