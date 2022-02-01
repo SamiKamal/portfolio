@@ -1,16 +1,19 @@
 import React from "react";
 import { DialogOverlay, DialogContent } from "@reach/dialog";
 import styled from "styled-components";
+import { animated } from "react-spring";
 
-function Modal({ children, isOpen, onDismiss, label }) {
+function Modal({ children, isOpen, onDismiss, label, styleContent = {}, ...props }) {
   return (
-    <Overlay isOpen={isOpen} onDismiss={onDismiss}>
-      <Content aria-label={label ? label : "alert"}>{children}</Content>
+    <Overlay isOpen={isOpen} onDismiss={onDismiss} {...props}>
+      <Content style={styleContent} aria-label={label ? label : "alert"}>
+        {children}
+      </Content>
     </Overlay>
   );
 }
 
-const Overlay = styled(DialogOverlay)`
+const Overlay = styled(animated(DialogOverlay))`
   position: absolute;
   top: 0;
   left: 0;
@@ -20,7 +23,7 @@ const Overlay = styled(DialogOverlay)`
   background: hsla(0 0% 0% / 0.5);
 `;
 
-const Content = styled(DialogContent)`
+const Content = styled(animated(DialogContent))`
   position: absolute;
   top: 50%;
   left: 50%;

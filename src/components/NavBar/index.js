@@ -14,11 +14,17 @@ function NavBar() {
   const [isActive, setIsActive] = useState(() => location.pathname.split("/")[1] || "/");
   const [isOpen, setIsOpen] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const transitions = useTransition(isOpen, {
+  const navTransitions = useTransition(isOpen, {
     from: { opacity: 0, x: 100 },
     enter: { opacity: 1, x: 0 },
     reverse: isOpen,
     leave: { opacity: 0, x: 100 },
+  });
+  const modalTransitions = useTransition(modalIsOpen, {
+    from: { opacity: 0, y: -30 },
+    enter: { opacity: 1, y: 0 },
+    reverse: modalIsOpen,
+    leave: { opacity: 0, y: 0 },
   });
 
   useEffect(() => {
@@ -60,13 +66,7 @@ function NavBar() {
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink
-            onClick={handleContactOnClick}
-            name="contact"
-            // href="mailto:me@samii.dev"
-            as="a"
-            active={isActive}
-          >
+          <NavLink onClick={handleContactOnClick} name="contact" as="a" active={isActive}>
             Contact
           </NavLink>
         </NavItem>
@@ -76,7 +76,7 @@ function NavBar() {
         <VisuallyHidden>Open Menu Button</VisuallyHidden>
       </ButtonMenu>
 
-      {transitions((styles, item) => {
+      {navTransitions((styles, item) => {
         return (
           item && (
             <Overlay
@@ -115,13 +115,7 @@ function NavBar() {
                     </NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink
-                      onClick={handleContactOnClick}
-                      name="contact"
-                      // href="mailto:me@samii.dev"
-                      as="a"
-                      active={isActive}
-                    >
+                    <NavLink onClick={handleContactOnClick} name="contact" as="a" active={isActive}>
                       Contact
                     </NavLink>
                   </NavItem>
@@ -131,34 +125,44 @@ function NavBar() {
           )
         );
       })}
-      <Modal
-        isOpen={modalIsOpen}
-        onDismiss={() => {
-          setModalIsOpen(false);
-          setIsActive(() => location.pathname.split("/")[1] || "/");
-        }}
-      >
-        <div>This will open your default mail app, are you sure you want to continue?</div>
-        <ModalButtonsWrapper>
-          <OpenMailButton
-            href="mailto:me@samii.dev"
-            onClick={() => {
-              setModalIsOpen(false);
-              setIsActive(() => location.pathname.split("/")[1] || "/");
-            }}
-          >
-            Yes
-          </OpenMailButton>
-          <CloseMailButton
-            onClick={() => {
-              setModalIsOpen(false);
-              setIsActive(() => location.pathname.split("/")[1] || "/");
-            }}
-          >
-            Cancel
-          </CloseMailButton>
-        </ModalButtonsWrapper>
-      </Modal>
+      {modalTransitions(
+        (styles, item) =>
+          item && (
+            <Modal
+              styleContent={{
+                transform: styles.y.to((value) => `translate(-50%, -50%) translateY(${value}px)`),
+              }}
+              style={{ opacity: styles.opacity }}
+              onDismiss={() => {
+                setModalIsOpen(false);
+                setIsActive(() => location.pathname.split("/")[1] || "/");
+              }}
+            >
+              <animated.div style={{ transform: styles.y.to((value) => `translateY(${value}px)`) }}>
+                <div>This will open your default mail app, are you sure you want to continue?</div>
+                <ModalButtonsWrapper>
+                  <OpenMailButton
+                    href="mailto:me@samii.dev"
+                    onClick={() => {
+                      setModalIsOpen(false);
+                      setIsActive(() => location.pathname.split("/")[1] || "/");
+                    }}
+                  >
+                    Yes
+                  </OpenMailButton>
+                  <CloseMailButton
+                    onClick={() => {
+                      setModalIsOpen(false);
+                      setIsActive(() => location.pathname.split("/")[1] || "/");
+                    }}
+                  >
+                    Cancel
+                  </CloseMailButton>
+                </ModalButtonsWrapper>
+              </animated.div>
+            </Modal>
+          )
+      )}
     </Wrapper>
   );
 }
