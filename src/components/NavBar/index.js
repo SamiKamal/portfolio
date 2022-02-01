@@ -134,10 +134,23 @@ function NavBar() {
       <Modal isOpen={modalIsOpen} onDismiss={() => setModalIsOpen(false)}>
         <div>This will open your default mail app, are you sure you want to continue?</div>
         <ModalButtonsWrapper>
-          <OpenMailButton href="mailto:me@samii.dev" onClick={() => setModalIsOpen(false)}>
+          <OpenMailButton
+            href="mailto:me@samii.dev"
+            onClick={() => {
+              setModalIsOpen(false);
+              setIsActive(() => location.pathname.split("/")[1] || "/");
+            }}
+          >
             Yes
           </OpenMailButton>
-          <CloseMailButton onClick={() => setModalIsOpen(false)}>Cancel</CloseMailButton>
+          <CloseMailButton
+            onClick={() => {
+              setModalIsOpen(false);
+              setIsActive(() => location.pathname.split("/")[1] || "/");
+            }}
+          >
+            Cancel
+          </CloseMailButton>
         </ModalButtonsWrapper>
       </Modal>
     </Wrapper>
