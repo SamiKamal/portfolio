@@ -19,11 +19,10 @@ function HomePage() {
         <TextWrapper>
           <Heading>Sami Ibrahim</Heading>
           <InnerTextWrapper>
-            <SubHeading symbol="//">Front-end web developer</SubHeading>
+            <SubHeading symbol="//">Software Engineer</SubHeading>
             <Paragraph>
-              Hi, My Name is Sami Ibrahim And I’m a React Front-End Developer Who is Based in Saudi
-              Arabia. I Have 2 Years of Experience in Coding, You Can{" "}
-              <a href="#work">CHECK MY PROJECTS DOWN BELOW</a>, or{" "}
+              Hi, My Name is Sami Ibrahim and I’m a Software Engineer Who is Based in Saudi Arabia.
+              You Can <a href="#work">CHECK MY PROJECTS DOWN BELOW</a>, or{" "}
               <Link to="/about">READ MORE ABOUT ME</Link>
             </Paragraph>
           </InnerTextWrapper>
