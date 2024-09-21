@@ -21,7 +21,7 @@ function HomePage() {
           <InnerTextWrapper>
             <SubHeading symbol="//">Software Engineer</SubHeading>
             <Paragraph>
-              Hi, My Name is Sami Ibrahim and I’m a Software Engineer Who is Based in Saudi Arabia.
+              Hi, I'm Sami. A Software Engineer in Saudi Arabia.
               You Can <a href="#work">CHECK MY PROJECTS DOWN BELOW</a>, or{" "}
               <Link to="/about">READ MORE ABOUT ME</Link>
             </Paragraph>
@@ -40,7 +40,7 @@ function HomePage() {
         <WorkList>
           <WorkCard
             title="Did I meet a hacker"
-            summary="It’s a website that allow users to search and report hackers they meet in video games."
+            summary="A website that allow users to search and report hackers they meet in video games."
             readMoreLink="/projects/didimeetahacker"
             visitLink="https://didimeetahacker.vercel.app/"
             githubLink="/"
@@ -50,7 +50,7 @@ function HomePage() {
 
           <WorkCard
             title="React Commerce"
-            summary="a website where you can buy furniture for your home."
+            summary="A website where you can buy furniture for your home."
             readMoreLink="/projects/react-commerce"
             visitLink="https://react-commercee.netlify.app/"
             githubLink="https://github.com/SamiKamal/React-commerce"
