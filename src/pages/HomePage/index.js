@@ -21,8 +21,8 @@ function HomePage() {
           <InnerTextWrapper>
             <SubHeading symbol="//">Software Engineer</SubHeading>
             <Paragraph>
-              Hi, I'm Sami. A Software Engineer from Saudi Arabia.
-              You Can <a href="#work">CHECK MY PROJECTS DOWN BELOW</a>, or{" "}
+              Hi, I'm Sami. A Software Engineer from Saudi Arabia. You Can{" "}
+              <a href="#work">CHECK MY PROJECTS DOWN BELOW</a>, or{" "}
               <Link to="/about">READ MORE ABOUT ME</Link>
             </Paragraph>
           </InnerTextWrapper>
